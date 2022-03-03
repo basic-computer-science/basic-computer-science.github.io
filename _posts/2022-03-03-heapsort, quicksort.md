@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Heap sort, Quick sort"
-date:   2022-02-28 19:31:29 +0900
 categories: Algorithm
 ---
 
