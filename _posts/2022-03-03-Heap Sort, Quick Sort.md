@@ -37,7 +37,7 @@ categories: Algorithm
 
 <Pseudocode>
 
-*MAX-HEAPIFY(A,i)
+MAX-HEAPIFY(A,i)
 1	l ← LEFT(i)
 2	r ← RIGHT(i)
 3	if l ≤ heap-size[A] and A[l] > A[i]
@@ -53,17 +53,16 @@ Time/Comparisons : $O(logn)$
 
 ⇒ 호출횟수가 n번이므로 전체 수행시간(힙정렬) : $O(nlogn)$ 
 
-**length[A] : 배열의 원소 갯수,
+- length[A] : 배열의 원소 갯수,
+- heap-size[A] : 힙정렬이 되어있는 A배열의 원소의 개수
 
-  heap-size[A] : 힙정렬이 되어있는 A배열의 원소의 개수
+<heapq 모듈> 
 
-**heapq 모듈 
+- heapq.heapify(x) ⇒ 리스트x를 최소 힙으로 바꿔줌
 
-→ heapq.heapify(x) ⇒ 리스트x를 최소 힙으로 바꿔줌
+- heapq.heappop(heap) ⇒ 가장작은원소를 pop
 
-→ heapq.heappop(heap) ⇒ 가장작은원소를 pop
-
-→ heapq.heappush(item, heap) ⇒ item을heap에추가
+- heapq.heappush(item, heap) ⇒ item을heap에추가
 
 ## Build MAX-HEAP
 
@@ -71,29 +70,29 @@ Time/Comparisons : $O(logn)$
 
 ![C0143A3E-48F5-439B-93E1-73BAAF68FDD9.jpeg](/public/img/Algorithm/C0143A3E-48F5-439B-93E1-73BAAF68FDD9.jpeg)
 
-*BUILD-MAX-HEAP(A) :*
+BUILD-MAX-HEAP(A) :
 
-*heap-size[A] ← length[A]*
+heap-size[A] ← length[A]
 
-*for i ← [length[A]/2] downto 1*
+for i ← [length[A]/2] downto 1
 
-*do MAX-HEAPIFY(A, i)*
+    do MAX-HEAPIFY(A, i)
 
 ## Heapsort Algorithm
 
 : 최대 힙의 루트노드부터 차례대로 꺼내어 저장. 
 
-*HEAPSORT(A):*
+HEAPSORT(A):
 
-*BUILD-MAX-HEAP(A)*
+    BUILD-MAX-HEAP(A)
 
-*for i ← length[A] downto 2*
+    for i ← length[A] downto 2
 
-*do exchange A[1] <->A[i]*
+        do exchange A[1] <->A[i]
 
-*heap-size[A] ← heap-size[A] -1*
+            heap-size[A] ← heap-size[A] -1
 
-*MAX-HEAPIFY(A,1)*
+            MAX-HEAPIFY(A,1)
 
 # Quick Sort
 
@@ -106,35 +105,36 @@ Time/Comparisons : $O(logn)$
 
 <Pseudocode>
 
-*1) Partition(A,p,r)*
+1) Partition(A,p,r)
 
-*x ← A[r]*
+x ← A[r]
 
-*i ← p-1*
+i ← p-1
 
-*for j ← p to r-1*
+for j ← p to r-1
 
-*do if A[j] ≤ x*
+    do if A[j] ≤ x
 
-*then i ← i+1*
+        then i ← i+1
 
-*exchange A[i] <-> A[j]*
+        exchange A[i] <-> A[j]
 
-*exchange A[j+1] <-> A[r]*
+exchange A[j+1] <-> A[r]
 
-*return i+1*
+return i+1
 
 ![Untitled](/public/img/Algorithm/Untitled%201.png)
 
-*2) QUICKSORT(A,p,r)*
+2) QUICKSORT(A,p,r)
 
-*if p<r*
+if p<r
 
-*then q ← Partition(A,p,r)*
+    then q ← Partition(A,p,r)
 
-*QUICKSORT(A,p,q-1)*
+        QUICKSORT(A,p,q-1)
 
-*QUICKSORT(A,q+1,r)*
+        QUICKSORT(A,q+1,r)
+
 
 - Best case (n/2 , p , n/2 로 나뉜경우)
     - T(n) = 2T(n/2) + $\theta(n)$ = $\theta(nlogn)$
