@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Process & Thread"
+
+categories: OS
+---
+
 # Process & Thread
 
 # Questions
