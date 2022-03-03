@@ -37,17 +37,17 @@ categories: Algorithm
 
 <Pseudocode>
 
-MAX-HEAPIFY(A,i)
-1	l ← LEFT(i)
-2	r ← RIGHT(i)
-3	if l ≤ heap-size[A] and A[l] > A[i]
-4		then largest←l
-5		else largest←i
-6	if r ≤ heap-size[A] and A[r] > A[largest]
-7		then largest ← r
-8	if largest ≠ i
-9		then exchangeA[i] <-> A[largest]
-10			MAX-HEAPIFY(A, largest)*
+MAX-HEAPIFY(A,i) :
+    l ← LEFT(i)
+    r ← RIGHT(i)
+    if l ≤ heap-size[A] and A[l] > A[i]
+        then largest←l
+        else largest←i
+    if r ≤ heap-size[A] and A[r] > A[largest]
+        then largest ← r
+    if largest ≠ i
+        then exchangeA[i] <-> A[largest]
+            MAX-HEAPIFY(A, largest)
 
 Time/Comparisons : $O(logn)$
 
@@ -72,11 +72,11 @@ Time/Comparisons : $O(logn)$
 
 BUILD-MAX-HEAP(A) :
 
-heap-size[A] ← length[A]
+    heap-size[A] ← length[A]
 
-for i ← [length[A]/2] downto 1
+    for i ← [length[A]/2] downto 1
 
-    do MAX-HEAPIFY(A, i)
+        do MAX-HEAPIFY(A, i)
 
 ## Heapsort Algorithm
 
@@ -105,39 +105,39 @@ HEAPSORT(A):
 
 <Pseudocode>
 
-1) Partition(A,p,r)
+Partition(A,p,r) :
 
-x ← A[r]
+    x ← A[r]
 
-i ← p-1
+    i ← p-1
 
-for j ← p to r-1
+    for j ← p to r-1
 
-    do if A[j] ≤ x
+        do if A[j] ≤ x
 
-        then i ← i+1
+            then i ← i+1
 
-        exchange A[i] <-> A[j]
+            exchange A[i] <-> A[j]
 
-exchange A[j+1] <-> A[r]
+    exchange A[j+1] <-> A[r]
 
-return i+1
+    return i+1
 
 ![Untitled](/public/img/Algorithm/Untitled%201.png)
 
-2) QUICKSORT(A,p,r)
+QUICKSORT(A,p,r) :
 
-if p<r
+    if p<r
 
-    then q ← Partition(A,p,r)
+        then q ← Partition(A,p,r)
 
-        QUICKSORT(A,p,q-1)
+            QUICKSORT(A,p,q-1)
 
-        QUICKSORT(A,q+1,r)
+            QUICKSORT(A,q+1,r)
 
 
 - Best case (n/2 , p , n/2 로 나뉜경우)
-    - T(n) = 2T(n/2) + $\theta(n)$ = $\theta(nlogn)$
+    - T(n) = 2T(n/2) + O(n) = O(nlogn)
 - Worst case (n-1, p, 0 으로 나뉜경우)
-    - T(n) = T(n-1) + T(0) + $\theta(n)$ = T(n-1) + $\theta$(n) = $\theta(n^2)$
-- Average Case : $\theta(nlogn)$
+    - T(n) = T(n-1) + T(0) + O(n) = T(n-1) + O(n) = O(n^2)
+- Average Case : O(nlogn)
