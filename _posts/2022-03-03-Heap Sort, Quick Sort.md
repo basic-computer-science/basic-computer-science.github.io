@@ -35,9 +35,9 @@ categories: Algorithm
 
 ![6A70F12B-E1D3-4B3A-BFAB-6FB83DB94203.jpeg](/public/img/Algorithm/6A70F12B-E1D3-4B3A-BFAB-6FB83DB94203.jpeg)
 
-<Pseudocode>
+Pseudocode
 
-MAX-HEAPIFY(A,i) :
+MAX-HEAPIFY(A,i) : 
     l ← LEFT(i)
     r ← RIGHT(i)
     if l ≤ heap-size[A] and A[l] > A[i]
@@ -56,7 +56,8 @@ Time/Comparisons : $O(logn)$
 - length[A] : 배열의 원소 갯수,
 - heap-size[A] : 힙정렬이 되어있는 A배열의 원소의 개수
 
-<heapq 모듈> 
+
+heapq 모듈 
 
 - heapq.heapify(x) ⇒ 리스트x를 최소 힙으로 바꿔줌
 
@@ -103,7 +104,7 @@ HEAPSORT(A):
 - Conquer 정복 : 퀵 정렬을 재귀호출해서 A[p, ..., q-1]과 A[q+1, ..., r]두 부분배열로 정렬
 - Combine 결합 : 부분 배열이 이미 정렬되어있으므로 합치는 작업 필요하지 않음
 
-<Pseudocode>
+Pseudocode
 
 Partition(A,p,r) :
 
