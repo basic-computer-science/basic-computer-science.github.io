@@ -37,21 +37,32 @@ categories: Algorithm
 
 Pseudocode
 
-MAX-HEAPIFY(A,i) : 
+MAX-HEAPIFY(A,i):
+
     l ← LEFT(i)
+
     r ← RIGHT(i)
+
     if l ≤ heap-size[A] and A[l] > A[i]
+
         then largest←l
+
         else largest←i
+
     if r ≤ heap-size[A] and A[r] > A[largest]
+
         then largest ← r
+
     if largest ≠ i
+
         then exchangeA[i] <-> A[largest]
+
             MAX-HEAPIFY(A, largest)
+            
 
-Time/Comparisons : $O(logn)$
+Time/Comparisons : O(logn)
 
-⇒ 호출횟수가 n번이므로 전체 수행시간(힙정렬) : $O(nlogn)$ 
+⇒ 호출횟수가 n번이므로 전체 수행시간(힙정렬) : O(nlogn)
 
 - length[A] : 배열의 원소 갯수,
 - heap-size[A] : 힙정렬이 되어있는 A배열의 원소의 개수
