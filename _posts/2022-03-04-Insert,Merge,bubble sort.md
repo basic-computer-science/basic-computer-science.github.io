@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Insertion, Merge, Bubble Sort"
+categories: Algorithm
+---
+
 # Insertion Sort, Merge Sort, Bubble Sort
 
 
