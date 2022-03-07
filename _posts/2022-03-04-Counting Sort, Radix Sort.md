@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Counting Sort, Radix Sort"
+categories: Algorithm
+---
+
 # Counting Sort, Radix Sort
 
 # <1> Counting Sort
