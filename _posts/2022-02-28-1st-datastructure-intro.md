@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "자료구조와 알고리즘"
-date:   2022-03-08 22:24:00 +0900
+date:   2022-02-28 22:24:00 +0900
 categories: DataStructure
 ---
 
