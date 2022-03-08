@@ -2,7 +2,7 @@
 layout: post
 title:  "자료구조와 알고리즘"
 date:   2022-03-08 22:24:00 +0900
-categories: Data Structure
+categories: DataStructure
 ---
 
 ### **📌 기술면접 질문 (답해보기)**
