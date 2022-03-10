@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "큐(Queue)"
+title:  "Queue"
 date:   2022-03-07 19:00:00 +0900
 categories: DataStructure
 ---

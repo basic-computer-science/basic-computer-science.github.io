@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "스택(Stack)"
+title:  "Stack"
 date:   2022-03-04 19:24:00 +0900
 categories: DataStructure
 ---
