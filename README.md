@@ -4,30 +4,25 @@ title: About
 permalink: /about/
 ---
 
-## Theme Monos
-> Simple and lightweight theme for Jekyll
+# Basic Computer Science 정리
 
-### Features
-- Responsive.
-- Syntax Highlight
-- Most optimized theme for tech blog.
-- Lightweight with minimum stylesheet.
-- Easy to customize.
-- Offers category menu.
+## Blog
+[CS 스터디 블로그] (https://basic-computer-science.github.io)
 
-### _config.yml
-> Code block will look like this.
-```yml
-highlighter-theme: monokai //you can change your syntax color scheme.
-date_format: "%Y-%M-%D" //and date format.
-```
+# Contributers
 
-### Screenshots
-#### Page
-![alt text](/public/img/screenshot-1.png)
-#### Articles
-![alt text](/public/img/screenshot-2.png)
-#### Page - Mobile
-![alt text](/public/img/screenshot-m1.png)
-#### Page - Articles
-![alt text](/public/img/screenshot-m2.png)
+| 이름   | GitHub                                         |
+| ------ | ---------------------------------------------- |
+| 강정구 | [@JungguKang](https://github.com/JungguKang) |
+| 송민진 | [@Song-Minjin](https://github.com/Song-Minjin) |
+| 임가현 | [@gahyun99](https://github.com/gahyun99) |
+| 임지우 | [@lim-jiwoo](https://github.com/lim-jiwoo) |
+| 허진 | [@jinih](https://github.com/jinih) |
+
+# Table of Contents
+
+- [자료구조](https://basic-computer-science.github.io/category/#DataStructure)
+- [알고리즘](https://basic-computer-science.github.io/category/#Algorithm)
+- [운영체제](https://basic-computer-science.github.io/category/#OS)
+- [네트워크](https://basic-computer-science.github.io/category/#Network)
+- [데이터베이스](https://basic-computer-science.github.io/category/#DB)
