@@ -7,7 +7,7 @@ permalink: /about/
 # Basic Computer Science 정리
 
 ## Blog
-[CS 스터디 블로그] (https://basic-computer-science.github.io)
+[CS 스터디 블로그](https://basic-computer-science.github.io)
 
 # Contributers
 
