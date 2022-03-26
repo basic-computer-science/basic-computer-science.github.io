@@ -6,10 +6,10 @@ permalink: /about/
 
 # Basic Computer Science 정리
 
-## Blog
+## ✒️ Blog
 [CS 스터디 블로그](https://basic-computer-science.github.io)
 
-# Contributers
+# 🧑‍🤝‍🧑 Contributers
 
 | 이름   | GitHub                                         |
 | ------ | ---------------------------------------------- |
@@ -19,7 +19,7 @@ permalink: /about/
 | 임지우 | [@lim-jiwoo](https://github.com/lim-jiwoo) |
 | 허진 | [@jinih](https://github.com/jinih) |
 
-# Table of Contents
+# 📚Table of Contents
 
 - [자료구조](https://basic-computer-science.github.io/category/#DataStructure)
 - [알고리즘](https://basic-computer-science.github.io/category/#Algorithm)
