@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Operating System 이란?"
+title:  "Deadlock"
 categories: OS
 ---
 

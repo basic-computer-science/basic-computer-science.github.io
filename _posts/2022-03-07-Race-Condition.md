@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Operating System 이란?"
+title:  "Race Condition"
 
 categories: OS
 ---
