@@ -1,4 +1,4 @@
-0---
+---
 layout: post
 title:  "[Data Structure] Data structure and Algorithms"
 date:   2022-02-28 22:24:00 +0900
