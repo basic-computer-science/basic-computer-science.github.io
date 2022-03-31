@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linked List (1)"
+title:  "[Data Structure] Linked List"
 date:   2022-03-11 18:00:00 +0900
 categories: DataStructure
 ---
