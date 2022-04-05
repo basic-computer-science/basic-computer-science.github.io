@@ -22,7 +22,7 @@ ex) 새로운 카드를 기존의 정렬된 카드 사이의 올바른 자리를
 
 ![Untitled](/public/img/Algorithm/Insertion  5892a/Untitled.png)
 
-![Untitled](/public/img/Algorithm/Insertion  5892a/Untitled 1.png)
+![Untitled](/public/img/Algorithm/Insertion  5892a/Lec01/Untitled 1.png)
 
 INSERTION-SORT(A) : 
 
@@ -66,7 +66,7 @@ MERGE-SORT(A,p,r) :
 
             MERGE(A,p,q,r)       #Combine (하나의 배열로 합병)
 
-![Untitled](/public/img/Algorithm/Insertion  5892a/Untitled 2.png)
+![Untitled](/public/img/Algorithm/Insertion  5892a/Lec01/Untitled 2.png)
 
 MERGE(A,p,q,r) :
 
@@ -108,7 +108,7 @@ MERGE(A,p,q,r) :
 
 - 시간복잡도
 
-![Untitled](/public/img/Algorithm/Insertion  5892a/Untitled 3.png)
+![Untitled](/public/img/Algorithm/Insertion  5892a/Lec01/Untitled 3.png)
 
 ⇒ n  * logn ⇒ O(nlogn)
 
@@ -118,7 +118,7 @@ MERGE(A,p,q,r) :
 
 = 1회전을 수행하고 나면 가장 큰 데이터가 맨 뒤에 오게된다. → 2회전에서는 마지막꺼를 제외하고 정렬, → 정렬을 1회전 수행할 때마다 정렬에서 제외되는 데이터가 하나씩 늘어난다.
 
-![Untitled](/public/img/Algorithm/Insertion  5892a/Untitled 4.png)
+![Untitled](/public/img/Algorithm/Insertion  5892a/Lec01/Untitled 4.png)
 
 BUBBLESORT(A) : 
 

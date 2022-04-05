@@ -22,7 +22,7 @@ categories: DataStructure
 
 ---
 
-![Untitled 12](https://user-images.githubusercontent.com/100582309/160956005-f913402e-72f2-416e-9519-36c2a90ab3f2.png)
+![Lec01/Untitled 12](https://user-images.githubusercontent.com/100582309/160956005-f913402e-72f2-416e-9519-36c2a90ab3f2.png)
 
 
 <br/>
@@ -40,7 +40,7 @@ categories: DataStructure
 
 삭제 : `deQueue` - 우선순위가 가장 높은, 가장 앞의 원소를 삭제
 
-![Untitled 13](https://user-images.githubusercontent.com/100582309/160956006-3948bd62-b058-4d57-a45a-8c28419bad2c.png)
+![Lec01/Untitled 13](https://user-images.githubusercontent.com/100582309/160956006-3948bd62-b058-4d57-a45a-8c28419bad2c.png)
 
 
 
@@ -110,13 +110,13 @@ def BFS(G, v) :           # 그래프 G, 탐색 시작점 v
 
 ### 1. **시작점 enQueue**
 
-![Untitled 14](https://user-images.githubusercontent.com/100582309/160956008-4ab6da60-c982-4bb5-84a8-f53ad9bf6188.png)
+![Lec01/Untitled 14](https://user-images.githubusercontent.com/100582309/160956008-4ab6da60-c982-4bb5-84a8-f53ad9bf6188.png)
 
 - Q에 `enQueue(A)`
 
 ### 2. **A점부터 시작**
 
-![Untitled 15](https://user-images.githubusercontent.com/100582309/160956010-6ef14a0b-4815-47c8-8086-c8466d818007.png)
+![Lec01/Untitled 15](https://user-images.githubusercontent.com/100582309/160956010-6ef14a0b-4815-47c8-8086-c8466d818007.png)
 
 - Q에서 `deQueue()` : A 삭제
 - `Q[0] = T`   : A 방문한 것으로 표시
@@ -125,7 +125,7 @@ def BFS(G, v) :           # 그래프 G, 탐색 시작점 v
 
 ### 3. B점부터 탐색 진행
 
-![Untitled 16](https://user-images.githubusercontent.com/100582309/160956013-88212944-3243-4d05-9685-273be88f9fe7.png)
+![Lec01/Untitled 16](https://user-images.githubusercontent.com/100582309/160956013-88212944-3243-4d05-9685-273be88f9fe7.png)
 
 - Q에서 `deQueue()` : B 삭제
 - `Q[1] = T`   : B 방문한 것으로 표시
@@ -134,7 +134,7 @@ def BFS(G, v) :           # 그래프 G, 탐색 시작점 v
 ### 4. C점부터 탐색 진행
 
 
-![Untitled 17](https://user-images.githubusercontent.com/100582309/160956015-a85b8cdd-dac6-4c64-9ec8-42c83f9ec867.png)
+![Lec01/Untitled 17](https://user-images.githubusercontent.com/100582309/160956015-a85b8cdd-dac6-4c64-9ec8-42c83f9ec867.png)
 
 - Q에서 `deQueue()` : C 삭제
 - `Q[2] = T`   : C 방문한 것으로 표시
@@ -142,7 +142,7 @@ def BFS(G, v) :           # 그래프 G, 탐색 시작점 v
 
 ### 5. D점부터 탐색 진행
 
-![Untitled 18](https://user-images.githubusercontent.com/100582309/160956023-7708bfb1-cc5c-4f8a-8d86-51925fda3ec0.png)
+![Lec01/Untitled 18](https://user-images.githubusercontent.com/100582309/160956023-7708bfb1-cc5c-4f8a-8d86-51925fda3ec0.png)
 
 - Q에서 `deQueue()` : D 삭제
 - `Q[3] = T`   : D 방문한 것으로 표시
@@ -151,7 +151,7 @@ def BFS(G, v) :           # 그래프 G, 탐색 시작점 v
 
 ### 6. E점부터 탐색 진행
 
-![Untitled 19](https://user-images.githubusercontent.com/100582309/160956032-80e1c6ef-329c-4092-863f-6d931e1aa482.png)
+![Lec01/Untitled 19](https://user-images.githubusercontent.com/100582309/160956032-80e1c6ef-329c-4092-863f-6d931e1aa482.png)
 
 - Q에서 `deQueue()` : E 삭제
 - `Q[4] = T`   : E 방문한 것으로 표시
@@ -159,14 +159,14 @@ def BFS(G, v) :           # 그래프 G, 탐색 시작점 v
 
 ### 7~. 같은 방법으로 F, G, H, I 방문
 
-![Untitled 20](https://user-images.githubusercontent.com/100582309/160956041-9bf75dd6-a262-4338-a6cd-459618be64dd.png)
+![Lec01/Untitled 20](https://user-images.githubusercontent.com/100582309/160956041-9bf75dd6-a262-4338-a6cd-459618be64dd.png)
 
 
-![Untitled 21](https://user-images.githubusercontent.com/100582309/160956046-43f5977f-40ef-4bae-bc56-8ae536815699.png)
+![Lec01/Untitled 21](https://user-images.githubusercontent.com/100582309/160956046-43f5977f-40ef-4bae-bc56-8ae536815699.png)
 
-![Untitled 22](https://user-images.githubusercontent.com/100582309/160956053-e314c0e7-14bc-4b18-9736-e1b29887dc79.png)
+![Lec01/Untitled 22](https://user-images.githubusercontent.com/100582309/160956053-e314c0e7-14bc-4b18-9736-e1b29887dc79.png)
 
-![Untitled 23](https://user-images.githubusercontent.com/100582309/160956060-bf2432c8-d916-43cb-a9a9-88fa4ce1ebb0.png)
+![Lec01/Untitled 23](https://user-images.githubusercontent.com/100582309/160956060-bf2432c8-d916-43cb-a9a9-88fa4ce1ebb0.png)
 
 
 - **I까지 방문하고 나면 탐색을 종료함**

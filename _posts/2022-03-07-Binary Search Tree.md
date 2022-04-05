@@ -192,7 +192,7 @@ return y
 - Case 2 : z가 자식이 하나인 경우. 해당 노드의 부모-자식 노드를 연결
 - Case 3 : z가 자식이 둘인 경우. → 중위순회방식으로 정렬한 후 successor값(삭제할 값 바로 다음 값)을 삭제한 위치에 채워넣는다. (predecessor값으로 넣어도 상관없음)
     
-    ![Untitled](\public\img\Algorithm\Binary Sea bbb81\Untitled 1.png)
+    ![Untitled](\public\img\Algorithm\Binary Sea bbb81\Lec01/Untitled 1.png)
     
 
 ## 정리
@@ -200,7 +200,7 @@ return y
 - 탐색, 삽입, 삭제의 계산복잡성은 모두 O(h)=O(logn) → 트리의 높이에 의해 수행시간이 결정되는 구조 h=logn
 - 아래 그림의 경우 노드 수는 적은 편인데 높이가 4. 균형이 안 맞기 때문이다. 극단적으로는 n개의 노드가 크기 순으로 일렬로 늘어뜨려져 높이 또한 n이 되는 경우도 이진트리탐색에 해당된다. 결과적으로 이진탐색트리의 계산복잡성은 O(n). 이래가지고서는 탐색 속도가 O(logn)으로 빠른 이진탐색을 계승했다고 보기 어렵다. 이 때문에 트리의 입력, 삭제 단계에 트리 전체의 균형을 맞추는 이진탐색트리의 일종인 AVL Tree가 제안되었다.
     
-    ![Untitled](\public\img\Algorithm\Binary Sea bbb81\Untitled 2.png)
+    ![Untitled](\public\img\Algorithm\Binary Sea bbb81\Lec01/Untitled 2.png)
     
 
 출처 

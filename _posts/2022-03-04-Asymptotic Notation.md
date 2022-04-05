@@ -27,7 +27,7 @@ categories: Algorithm
 - Big-O notation
 - f(n)이 n0보다 크거나 같은 모든 n에서 0이상이고, cg(n) 이하이면 O(g(n)) = f(n)
     
-    ![Untitled](/public/img/Algorithm/Asymptotic 712f8/Untitled 1.png)
+    ![Untitled](/public/img/Algorithm/Asymptotic 712f8/Lec01/Untitled 1.png)
     
 - g(n)은 f(n)의 점근 상한 (asymptotic upper bound)
 - 알고리즘 f(n)이 O(g(n))에 속한다면, f(n)의 계산복잡도는 최악의 경우라도 g(n)과 같거나 혹은 작다는 뜻
@@ -41,7 +41,7 @@ categories: Algorithm
 - 알고리즘 f(n)의 계산복잡도가 Ω(g(n))에 속한다면, f(n)의 계산복잡도는 최선의 경우를 상정하더라도 g(n)과 같거나 혹은 크다는 뜻
 - 최선의 경우에도 cg(n)보다 크거나 같다.
     
-    ![Untitled](/public/img/Algorithm/Asymptotic 712f8/Untitled 2.png)
+    ![Untitled](/public/img/Algorithm/Asymptotic 712f8/Lec01/Untitled 2.png)
     
 
 ## Asymptotically tight bound
@@ -49,12 +49,12 @@ categories: Algorithm
 - 점근적 상한과 하한의 교집합
 - Big Θ-notation
     
-    ![Untitled](/public/img/Algorithm/Asymptotic 712f8/Untitled 3.png)
+    ![Untitled](/public/img/Algorithm/Asymptotic 712f8/Lec01/Untitled 3.png)
     
 - 내가 만든 알고리즘 f(n)이 아무리 나쁘거나 좋더라도 그 계산복잡도는 g(n)의 범위 내에 있다는 뜻
 - ex> (n^2)/2-2n = Θ(n^2)
     - 8(n0) 이상인 모든 n에 대하여 0 ≤ c1n^2 ≤ (n^2)/2−2n ≤ c2n^2을 만족하는 c1,c2가 존재하기 때문
 
-![Untitled](/public/img/Algorithm/Asymptotic 712f8/Untitled 4.png)
+![Untitled](/public/img/Algorithm/Asymptotic 712f8/Lec01/Untitled 4.png)
 
 출처:[https://ratsgo.github.io/data structure&algorithm/2017/09/13/asymptotic/](https://ratsgo.github.io/data%20structure&algorithm/2017/09/13/asymptotic/)
