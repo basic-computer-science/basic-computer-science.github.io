@@ -44,4 +44,7 @@ permalink: /about/
   - [Application Layer-2](https://basic-computer-science.github.io/network/2022/03/06/4th-network.html)
   - [Transport Layer](https://basic-computer-science.github.io/network/2022/03/07/5th-network.html)
 - [데이터베이스](https://basic-computer-science.github.io/category/#DB)
-  - [SQL](https://basic-computer-science.github.io/db/2022/03/04/DB-SQL.html)
+  - [DB란](https://basic-computer-science.github.io/db/2022/03/01/DB-1.html)
+  - [SQL-1](https://basic-computer-science.github.io/db/2022/03/04/DB-2.html)
+  - [SQL-2](https://basic-computer-science.github.io/db/2022/03/07/DB-3.html)
+  - [DBMS란](https://basic-computer-science.github.io/db/2022/03/11/DB-4.html)
