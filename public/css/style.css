@@ -306,6 +306,22 @@ footer {
 	color: #ccc;
 }
 
+.notice {
+	background-color: #dddddd;
+	padding: 1rem;
+	margin: 1rem 0;
+	border-radius: 1rem;
+}
+
+.center {
+	display: block;
+	margin: auto;
+}
+
+.left {
+	float: left;
+}
+  
 
 @media (max-width: 576px) {
 	article {
