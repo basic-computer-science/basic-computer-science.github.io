@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Minimum Spanning Trees - Kruskal’s Alg, Prim’s Alg"
+title:  "[Algorithm] Minimum Spanning Trees - Kruskal’s Alg, Prim’s Alg"
 categories: Algorithm
 ---
 # Minimum Spanning Trees - Kruskal’s Alg, Prim’s Alg
