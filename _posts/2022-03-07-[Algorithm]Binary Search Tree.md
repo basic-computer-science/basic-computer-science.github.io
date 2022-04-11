@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Binary Search Tree"
+title:  "[Algorithm] Binary Search Tree"
 categories: Algorithm
 ---
 
