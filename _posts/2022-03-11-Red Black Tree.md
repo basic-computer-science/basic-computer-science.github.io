@@ -28,7 +28,7 @@ categories: Algorithm
 
 5️⃣ 모든 Leaf 노드에서 Black Depth는 같다. = 루트에서 말단노드까지의 Black노드의 개수는 언제나 동일하다.
 
-![h = height, bh = black height](/public/img/Algorithm/Red Black  97873/Untitled.png)
+![h = height, bh = black height](/public/img/Algorithm/RedBlack/Untitled.png)
 
 h = height, bh = black height
 
@@ -43,7 +43,7 @@ h = height, bh = black height
 - 이진탐색트리의 특성을 유지하면서 왼쪽 혹은 오른쪽으로 회전하는 방법
 - 레드블랙트리에서는 삽입이나 삭제 후 레드블랙특성을 유지하기 위해 사용된다.
 
-![Untitled](/public/img/Algorithm/Red Black  97873/Untitled 1.png)
+![Untitled](/public/img/Algorithm/RedBlack/Untitled1.png)
 
 ## Insertion
 
@@ -55,7 +55,7 @@ h = height, bh = black height
 
 삽입하려고 하는 노드의 부모노드가 Red인 경우 → Double Red 문제가 발생한다.
 
-![Untitled](/public/img/Algorithm/Red Black  97873/Untitled 2.png)
+![Untitled](/public/img/Algorithm/RedBlack/Untitled2.png)
 
 +
 
@@ -99,7 +99,7 @@ x가 R&B 면 → 그냥 Black으로 바꿔주면 1)2) 문제 해결
 - w를 Black으로, x의 부모를 Red로 바꾼다.
 - p[x]를 기준으로 Left Rotate한다.
 
-![Untitled](/public/img/Algorithm/Red Black  97873/Untitled 3.png)
+![Untitled](/public/img/Algorithm/RedBlack/Untitled3.png)
 
 - x의 새로운 형제(=c는) 이전에 w의 자식이었기 때문에 반드시 Black 일것이다.
 - 이 다음 case 2,3,4 를 수행한다.
@@ -109,7 +109,7 @@ x가 R&B 면 → 그냥 Black으로 바꿔주면 1)2) 문제 해결
 - x를 singly Black으로, w를 Red로 바꿔준다.
 - x로부터 빼앗은 Black을 p[x]로 전달하고 → p[x]가 이제 new x
 
-![Untitled](/public/img/Algorithm/Red Black  97873/Untitled 4.png)
+![Untitled](/public/img/Algorithm/RedBlack/Untitled4.png)
 
 ⇒
 
@@ -122,7 +122,7 @@ x가 R&B 면 → 그냥 Black으로 바꿔주면 1)2) 문제 해결
 - w를 Red로 바꾸고, w의 왼쪽자식을 Black으로 바꾼다.
 - 그 다음 w에 대해 Right Rotate를 한다.
 
-![Untitled](/public/img/Algorithm/Red Black  97873/Untitled 5.png)
+![Untitled](/public/img/Algorithm/RedBlack/Untitled5.png)
 
 - x의 새로운 형제가 된 new w는 Black이 되고, new w의 오른쪽 자식은 Red가 된다. → Case4로 이동
 
