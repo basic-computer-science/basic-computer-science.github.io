@@ -5,9 +5,10 @@ categories: Algorithm
 ---
 # Minimum Spanning Trees - Kruskal’s Alg, Prim’s Alg
 
-- Spanning Tree : 그래프 내의 모든 정점을 포함하는 트리
-    - n개의 정점 - (n-1)개의 간선
-- Minimum Spanning Tree (최소 신장 트리): Spanning Tree 중에서 사용된 간선들의 가중치 합이 최소인 트리
+💡 Spanning Tree : 그래프 내의 모든 정점을 포함하는 트리 -> n개의 정점 - (n-1)개의 간선
+{: .notice}
+💡 Minimum Spanning Tree (최소 신장 트리): Spanning Tree 중에서 사용된 간선들의 가중치 합이 최소인 트리
+{: .notice}
 
 ## 🔻Spanning Tree
 
