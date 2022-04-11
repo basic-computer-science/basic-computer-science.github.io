@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Elementary Graph Algorithms -BFS, DFS, DAG, Strongly Connected Components"
+title:  "[Algorithm] Elementary Graph Algorithms -BFS, DFS, DAG, Strongly Connected Components"
 categories: Algorithm
 ---
 
