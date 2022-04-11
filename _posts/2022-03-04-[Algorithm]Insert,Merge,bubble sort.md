@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Insertion, Merge, Bubble Sort"
+title:  "[Algorithm] Insertion, Merge, Bubble Sort"
 categories: Algorithm
 ---
 
