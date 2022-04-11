@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Heap Sort, Quick Sort"
+title:  "[Algorithm] Heap Sort, Quick Sort"
 categories: Algorithm
 ---
 
