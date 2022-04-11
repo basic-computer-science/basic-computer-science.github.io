@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Asymptotic notation"
+title:  "[Algorithm] Asymptotic notation"
 categories: Algorithm
 ---
 
