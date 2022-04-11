@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Counting Sort, Radix Sort"
+title:  "[Algorithm] Counting Sort, Radix Sort"
 categories: Algorithm
 ---
 
