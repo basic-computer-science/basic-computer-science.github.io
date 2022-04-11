@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Red Black Tree"
+title:  "[Algorithm] Red Black Tree"
 categories: Algorithm
 ---
 
