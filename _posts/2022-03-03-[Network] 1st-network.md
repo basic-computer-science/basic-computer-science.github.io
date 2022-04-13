@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "1st-컴퓨터 네트워크와 인터넷"
+title:  "[Network] 1st-컴퓨터 네트워크와 인터넷"
 categories: Network
 ---
 

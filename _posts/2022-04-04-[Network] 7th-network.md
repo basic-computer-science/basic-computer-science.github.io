@@ -1,14 +1,10 @@
 ---
 layout: post
-title:  "7th-Transport Layer(final)"
+title:  "[Network] 7th-Transport Layer(final)"
 categories: Network
 ---
 
-### 7주차
-
----
-
-### Transport Layer
+### 7주차 Transport Layer
 
 
 #### 3-6. Flow Control 
@@ -45,14 +41,14 @@ categories: Network
 
    TCP에서는 대표적인 혼잡 회피 방법인 AIMD와 Slow Start 방법을 조합해서 혼잡 제어 정책을 수행한다. 
 
-1. AIMD
+**1. AIMD**
 
 ![1](/public/img/network/7주차/1.JPG)
 
 
  - 합 증가 / 곱 감소 방식으로 늘어날 때는 1씩 늘어나고, 혼잡 상태가(데이터가 유실되거나 응답이 오지않는 등) 감지되어 줄어들때는 절반으로 확 줄어드는 방식
 
-2. Slow Start
+**2. Slow Start**
 
 ![2](/public/img/network/7주차/2.JPG)
 
@@ -66,7 +62,7 @@ categories: Network
 
    - 임계점(ssthresh)을 사용하는 이유 : slow start로 계속 지수승으로 증가하다 보면 제어가 힘들기도 하고, 혼잡 예상 상황에서는 AIMD로 전환하는 것이 훨씬 안전하기 때문
 
-1. TCP Tahoe
+**1. TCP Tahoe**
 
 ![3](/public/img/network/7주차/3.JPG)
 
@@ -77,7 +73,7 @@ categories: Network
    - timeout의 경우 : 위와 같음
 
 
-2. TCP Reno
+**2. TCP Reno**
 
 ![4](/public/img/network/7주차/4.JPG)
 

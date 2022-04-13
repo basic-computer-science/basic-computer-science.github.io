@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2nd-계층화된 구조"
+title:  "[Network] 2nd-계층화된 구조"
 categories: Network
 ---
 
