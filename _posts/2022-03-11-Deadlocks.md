@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deadlock"
+title:  "[OS]Deadlock"
 categories: OS
 ---
 

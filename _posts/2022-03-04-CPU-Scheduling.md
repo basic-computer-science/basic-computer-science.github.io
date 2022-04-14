@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CPU Scheduling"
+title: "[OS]CPU Scheduling"
 categories: OS
 ---
 
