@@ -22,11 +22,13 @@ permalink: /about/
 # 📚Table of Contents
 
 - [자료구조](https://basic-computer-science.github.io/category/#DataStructure)
-  - [자료구조와 알고리즘](https://basic-computer-science.github.io/datastructure/2022/02/28/1st-datastructure-intro.html)
-  - [Recursion](https://basic-computer-science.github.io/datastructure/2022/03/02/2nd-datastructure-recursion.html)
-  - [Stack](https://basic-computer-science.github.io/datastructure/2022/03/04/3rd-datastructure-stack.html)
-  - [Queue](https://basic-computer-science.github.io/datastructure/2022/03/07/4th-datastructure-Queue.html)
-  - [LinkedList](https://basic-computer-science.github.io/datastructure/2022/03/11/5th-datastructure-Linked-list-1.html)
+  - [자료구조와 알고리즘](https://basic-computer-science.github.io/datastructure/2022/02/28/DS-Data-structure-&-Algorithms.html)
+  - [Recursion](https://basic-computer-science.github.io/datastructure/2022/03/02/DS-Recursion.html)
+  - [Stack](https://basic-computer-science.github.io/datastructure/2022/03/04/DS-Stack.html)
+  - [Queue](https://basic-computer-science.github.io/datastructure/2022/03/07/DS-Queue.html)
+  - [Priority Queue](https://basic-computer-science.github.io/datastructure/2022/03/11/DS-Priority-Queue.html)
+  - [LinkedList](https://basic-computer-science.github.io/datastructure/2022/03/30/DS-Linked-list.html)
+
 - [알고리즘](https://basic-computer-science.github.io/category/#Algorithm)
   - [Heap sort & Quick sort](https://basic-computer-science.github.io/algorithm/2022/03/03/Heap-Sort,-Quick-Sort.html)
   - [Asymptotic notation](https://basic-computer-science.github.io/algorithm/2022/03/04/Asymptotic-Notation.html)
