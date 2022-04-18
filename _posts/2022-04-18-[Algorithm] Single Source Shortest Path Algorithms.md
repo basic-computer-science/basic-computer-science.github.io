@@ -75,8 +75,8 @@ categories: Algorithm
 
 🔻
 
-![Untitled](/public/img/Algorithm/Single/4.png){: width="400px" .left}
-![Untitled](/public/img/Algorithm/Single/5.png){: width="400px" .right}
+![Untitled](/public/img/Algorithm/Single/4.png){: .left}
+![Untitled](/public/img/Algorithm/Single/5.png)
 
 ![Untitled](/public/img/Algorithm/Single/6.png){: width="400px" .left}
 ![Untitled](/public/img/Algorithm/Single/7.png)
