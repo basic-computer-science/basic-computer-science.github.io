@@ -75,7 +75,7 @@ categories: Algorithm
 
 🔻
 
-![Untitled](/public/img/Algorithm/Single/4.png){: .left}
+![Untitled](/public/img/Algorithm/Single/4.png){: width="400px" .left}
 ![Untitled](/public/img/Algorithm/Single/5.png)
 
 ![Untitled](/public/img/Algorithm/Single/6.png){: width="400px" .left}
@@ -109,7 +109,7 @@ categories: Algorithm
 
 🔻
 
-![Untitled](/public/img/Algorithm/Single/15.png){: width="400px" .left}
+![Untitled](/public/img/Algorithm/Single/15.png){: .center}
 ① 모든 정점들을 최소우선순위큐에 삽입한다.
 ② 최단 경로 가중치 값 ( d[v] )이 가장 작은 정점을 선택해 인접간선들에 대해 Relax를 수행하여, 시작 정점으로부터 각 정점까지의 최단경로비용을 계산한다.
 
@@ -117,6 +117,7 @@ categories: Algorithm
 
 ![Untitled](/public/img/Algorithm/Single/16.png){: width="400px" .left}
 **시작 정점을 0**으로 잡고, 각 지점까지의 거리를 표시. **직접적으로 가는 경로가 없는 경우 무한대**로 표시. 표시 되어 있는 거리 중 **가장 짧은 거리는 정점 4까지의 거리인 3이므로 정점 4를 집합 S에 추가시켜준다.**
+
 
 ![Untitled](/public/img/Algorithm/Single/17.png){: width="400px" .left}
 **새로운 정점이 S에 추가되면 다른 정점들의 distance 값이 변경**된다. 0번 정점에서는 직접적으로 갈 수 없던 정점에 새롭게 들어온 정점 4를 통해 직접적으로 갈 수 있기 때문에 **무한대의 값에서 구체적인 정수거리로 정보가 갱신된다.** 또한 **새로운 정점 4를 통해 갈 때 더 짧은 경로가 발견 된다면 그 정보 또한 갱신**을 해준다.
