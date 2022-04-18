@@ -130,7 +130,7 @@ Relaxation이란 d[v]값이 δ(s, v)의 상한이 되도록 유지하는 것을 
 
 ### Dijkstra's Algorithm Example
 
-![Untitled](/public/img/Algorithm/Single/16.png){: width="400px" .left}
+![Untitled](/public/img/Algorithm/Single/16.png){: width="400px"}
 **시작 정점을 0**으로 잡고, 각 지점까지의 거리를 표시. 
 
 **직접적으로 가는 경로가 없는 경우 무한대**로 표시. 
