@@ -131,6 +131,7 @@ Relaxation이란 d[v]값이 δ(s, v)의 상한이 되도록 유지하는 것을 
 ### Dijkstra's Algorithm Example
 
 ![Untitled](/public/img/Algorithm/Single/16.png){: width="400px"}
+
 **시작 정점을 0**으로 잡고, 각 지점까지의 거리를 표시. 
 
 **직접적으로 가는 경로가 없는 경우 무한대**로 표시. 
@@ -139,6 +140,7 @@ Relaxation이란 d[v]값이 δ(s, v)의 상한이 되도록 유지하는 것을 
 
 
 ![Untitled](/public/img/Algorithm/Single/17.png)
+
 **새로운 정점이 S에 추가되면 다른 정점들의 distance 값이 변경**된다. 
 
 0번 정점에서는 직접적으로 갈 수 없던 정점에 새롭게 들어온 정점 4를 통해 
@@ -152,6 +154,7 @@ Relaxation이란 d[v]값이 δ(s, v)의 상한이 되도록 유지하는 것을 
 갱신된 정보를 바탕으로 집합 S에 추가할 다음 정점을 선택. 남은 정점 중 가중치가 가장 작은 정점1을 S에 추가하고 정보를 갱신한다.
 
 ![Untitled](/public/img/Algorithm/Single/18.png)
+
 1번 정점을 추가함으로써 2번 정점까지 직접적으로 갈 수 있게 되었으므로 
 
 **무한대의 값에서 구체적인 가중치인 9로 수정해준다. 현재까지의 distance 배열값을 기준**으로 
@@ -160,12 +163,14 @@ Relaxation이란 d[v]값이 δ(s, v)의 상한이 되도록 유지하는 것을 
 
 
 ![Untitled](/public/img/Algorithm/Single/19.png)
+
 **6번 정점을 집합 S에 추가함**으로써 갱신할 수 있는 정보는 **정점 3까지의 거리.** 
 
 다음 택할 정점은 정점2
 
 
 ![Untitled](/public/img/Algorithm/Single/20.png)
+
 **정점 2를 집합 S에 추가함**으로써 **정점 3까지의 거리가 갱신**되었다. 
 
 **가중치가 가장 적은 5번 정점을 선택**하고, 갱신할 정보가 있다면 갱신한다. 
