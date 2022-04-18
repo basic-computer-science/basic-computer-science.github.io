@@ -57,7 +57,7 @@ categories: Algorithm
 - Relax란 **목적지 정점( v2 )의 추정값과 직전 정점 ( v1 )의 추정값 + 간선의 가중치를 비교해서 목적지 정점의 추정 값을 조정하는 것을 의미한다.**
 - 추정 값을 변경시킬 수도 있고, 안할수도 있다.
 
-![Untitled](/public/img/Algorithm/Single/2.png)
+![Untitled](/public/img/Algorithm/Single/2.png){: width="600px"}
 
 ## **Bellman-Ford 알고리즘**
 
