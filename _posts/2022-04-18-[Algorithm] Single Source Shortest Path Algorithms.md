@@ -107,7 +107,7 @@ categories: Algorithm
 
 🔻
 
-![Untitled](/public/img/Algorithm/Single/15.png)
+![Untitled](/public/img/Algorithm/Single/15.png){: width="500px"}
 
 **1. 모든 정점들을 최소우선순위큐에 삽입한다.**
 **2. 최단 경로 가중치 값 ( d[v] )이 가장 작은 정점을 선택해 인접간선들에 대해 Relax를 수행하여, 시작 정점으로부터 각 정점까지의 최단경로비용을 계산한다.**
