@@ -114,9 +114,10 @@ categories: Algorithm
 
 
 
-🔻
-![Untitled](/public/img/Algorithm/Single/16.png)
-**시작 정점을 0**으로 잡고, 각 지점까지의 거리를 표시. **직접적으로 가는 경로가 없는 경우 무한대**로 표시. 표시 되어 있는 거리 중 **가장 짧은 거리는 정점 4까지의 거리인 3이므로 정점 4를 집합 S에 추가시켜준다.** 
+### Dijkstra's Algorithm Example
+
+![Untitled](/public/img/Algorithm/Single/16.png){: width="400px" .left}
+**시작 정점을 0**으로 잡고, 각 지점까지의 거리를 표시. **직접적으로 가는 경로가 없는 경우 무한대**로 표시. 표시 되어 있는 거리 중 **가장 짧은 거리는 정점 4까지의 거리인 3이므로 정점 4를 집합 S에 추가시켜준다.**
 
 
 ![Untitled](/public/img/Algorithm/Single/17.png)
