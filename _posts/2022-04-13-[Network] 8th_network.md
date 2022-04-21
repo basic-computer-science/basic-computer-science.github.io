@@ -39,6 +39,8 @@ categories: Network
 
 - What is subnet?
 
+![7](/public/img/network/8주차/7.JPG){: .center}
+
    - IP주소를 지역적으로 나누어 여러개의 서로 연결된 지역 네트워크로 사용하는 방법
 
    - 클래스별로 네트워크 영역을 다르게 하는 방법
@@ -60,6 +62,8 @@ categories: Network
 
 - 서브넷 마스크를 직접 정의함으로써(slash 뒤에) 네트워크 영역과 호스트영역을 가변적으로 조절 가능
 
+-  [https://daengsik.tistory.com/8](https://daengsik.tistory.com/8)
+
 - 각 클래스가 가지는 디폴트 서브넷 마스크에 얽매이지 않고 기존 IP 주소 할당 방식이었던 클래스를 대체하며 IP주소의 네트워크 영역, 호스트영역을 유연하게 나누어준다
 
 - 기존은 클래스의 형태로 네트워크를 할당하여서 낭비되는 주소가 많았는데, IPv4 주소를 보다 효율적으로 사용
@@ -68,11 +72,53 @@ categories: Network
 
 ![5](/public/img/network/8주차/5.JPG){: .center}
 
-- Host가 IP address를 할당받는 방법
+- 클라이언트/서버 모델이며, Host가 IP address를 할당받는 방법
 
 - DHCP지원 클라이언트는 네트워크 부팅과정에서 DHCP서버에 IP주소를 요청하고 이를 얻을 수 있다 -> 인터넷 사용이 가능해짐
 
-- 한계 : DHCP 서버에 의존되기 때문에 서버가 다운 시, IP 할당이 제대로 이루어지지 않는다.
+> 임대 과정
+
+**1. DHCP Discover**
+
+- DHCP server가 어디있는지 모르는 상태에서 동일 subnet상에 브로드캐스팅을 하여 DHCP 서버를 찾는다. 
+
+- 동일 서브넷안에 있는 모든 단말들은 이 메세지를 수신한다.
+
+**2. DHCP Offer**
+  
+- 자신의 존재(자신의 IP주소)를 알림과 동시에, 사용할 수 있는 IP 주소 정보를 포함한 다양한 네트워크 정보를 client에게 전달한다. 
+
+- DHCP client가 보낸 broadcast flag 값에 따라 브로드 캐스팅을 할 수도, 유니 캐스트를 할 수도 있다.
+
+**3. DHCP Request**
+
+- DHCP 메세지를 통해 server의 존재를 확인하고 하나의 DHCP server를 선택한 뒤, 단말이 사용할 네트워크 정보를 요청한다. (DHCP Offer가 여러대에서 왔을 수 있음으로 선택할 DHCP 주소를 메세지에 지정)
+
+
+**4. DHCP Ack**
+
+- DHCP 서버는 Request내에 기록된 IP주소가 자신의 주소인지 확인한 후 단말에게 사용할 네트워크 정보 전달
+
+- 이 경우 또한, Broadcast일수도 unicast일수도 있음
+
+> 주소 임대기간 연장 과정
+
+**1. DHCP Request**
+
+- 임대기간 연장을 요청하는 Request를 Unicast로 client ip주소를 포함하여 전송
+
+- "ip주소 x.x.x.x 임대기간을 연장하고 싶은데 허락해주세요!"
+
+**2. DHCP Ack**
+
+- 요청 수락 메세지를 모든 정보를 포함해서 Unicasting으로 보낸다.
+
+- "요청을 수락하겠습니다. x.x.x.x ip주소를 ~초 더 사용하도록 하세요"
+
+
+> 한계 
+   
+     DHCP 서버에 의존되기 때문에 서버가 다운 시, IP 할당이 제대로 이루어지지 않는다.
 
 #### 4-4. NAT(Network Addressing Translation)
 
@@ -98,12 +144,22 @@ Q. DHCP 프로토콜에 대해 설명하라. DHCP 서버의 역할은 무엇인�
 
 
 **참고 링크**
-[https://nenunena.tistory.com/52](https://nenunena.tistory.com/52)
 
-[https://kibua20.tistory.com/132](https://kibua20.tistory.com/132)
+1. 라우팅과 포워딩
+   [https://nenunena.tistory.com/52](https://nenunena.tistory.com/52)
 
-[https://hwannny.tistory.com/86](https://hwannny.tistory.com/86)
+2. 서브넷 & CIDR
+   [https://kibua20.tistory.com/132](https://kibua20.tistory.com/132)
 
+   [https://hwannny.tistory.com/86](https://hwannny.tistory.com/86)
+
+3. NAT
 [https://velog.io/@hidaehyunlee/%EA%B3%B5%EC%9D%B8Public-%EC%82%AC%EC%84%A4Private-IP%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90](https://velog.io/@hidaehyunlee/%EA%B3%B5%EC%9D%B8Public-%EC%82%AC%EC%84%A4Private-IP%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90)
 
-[https://jwprogramming.tistory.com/30](https://jwprogramming.tistory.com/30)
+   [https://jwprogramming.tistory.com/30](https://jwprogramming.tistory.com/30)
+
+4. DHCP
+
+   [https://ja-gamma.tistory.com/entry/DHCP%EA%B0%9C%EB%85%90%EB%8F%99%EC%9E%91%EC%9B%90%EB%A6%AC](https://ja-gamma.tistory.com/entry/DHCP%EA%B0%9C%EB%85%90%EB%8F%99%EC%9E%91%EC%9B%90%EB%A6%AC)
+
+   [https://jwprogramming.tistory.com/35](https://jwprogramming.tistory.com/35)
