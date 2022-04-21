@@ -136,6 +136,15 @@ categories: Network
    3. 네트워크 성능 지연 : 모든 데이터에 대하여 주소 변환을 하면 네트워크가 지연된다.
 
 
+#### 4-5. IP fragmentation
+
+![8](/public/img/network/8주차/8.JPG){: .center}
+
+     패킷이 전송되는 링크마다 MTU(Max Transfer Unit)가 다르기 때문에 Ip의 데이터그램을 여러 조각으로 쪼개서 전송하고, 목적지에서 재결합(reassembly)한다.  
+
+     IP 헤더를 통해 하나의 datagram이었는 지(identifier) 구분하고 offset을 통해 순서 확인
+
+
 **기출**
 
 Q. NAT (Networking Address Translation)에 대해 설명하라. NAT의 문제점은 무엇인가?
