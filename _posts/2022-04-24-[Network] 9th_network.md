@@ -26,7 +26,9 @@ categories: Network
 
 ![1](/public/img/network/9주차/1.JPG){: .center}
 
-    IPv4를 사용하는 라우터 사이에서 IPv6 데이터그램이 IPv4 데이터그램안에 들어감으로써 이동되어지도록 IPv6을 IPv4로 캡슐화하는 방법
+    IPv4를 사용하는 라우터 사이에서 IPv6 데이터가 IPv4 데이터그램안에 들어감으로써 IPv4 네트워크에서 이동되어지도록 IPv6을 IPv4로 캡슐화하는 방법
+
+- 듀얼스택 라우터 : IPv6과 IPv4를 혼용하여 사용하는 라우터, IPv4 터널을 다른 듀얼 스택 라우터와 연결하여 데이터 전송, 듀얼 스택 라우터에서 IPv6을 IPv4로 캡슐화 시켜줌 
 
 ---
 
@@ -38,15 +40,13 @@ categories: Network
 
 > 통신 과정
 
-1. ARP는 목적지 MAC 주소를 모르는 상태이기때문에, MAC address를 00:00:00:00:00:00(6byte)으로 비워둔다.(이더넷 프로토콜 사용, 같은 LAN 안에서 사용하는 프로토콜)
+1. ARP는 목적지 MAC 주소를 모르는 상태이기때문에, MAC address를 00:00:00:00:00:00(6byte)으로 비워둔 뒤, 같은 대역에 있는 모든 장비에게 브로드캐스트
 
-2. 2계층 장비가 2계층까지만 decapsulation을 한 뒤, 브로드 캐스트 맥주소임을 확인을 하고 같은 대역에 있는 모든 장비에게 브로드캐스트 
+2. 이를 받은 모두는 decapsulation을 통해 2계층(브로드캐스트임을 알 수 있다.)을 열어본다.
 
-3. 이를 받은 모두는 decapsulation을 통해 이더넷 프로토콜을 열어본다.
+3. 3계층도 열어보게 되고, 본인의 ip주소와 목적지 ip주소가 일치하지 않는다면 패킷을 discard, 그렇지 않으면 응답 프로토콜을 만든 뒤 본인의 mac주소를 넣어 유니캐스트로 원래노드로 전송
 
-4. 3계층도 열어보게 되고, 본인의 ip주소와 목적지 ip주소가 일치하지 않는다면 패킷을 discard, 그렇지 않으면 응답 프로토콜을 만든 뒤 본인의 mac주소를 넣어 유니캐스트로 원래노드로 전송
-
-5. 이를 다시 받은 원래 노드는 응답받은 맥주소를 **ARP 캐시 테이블**에 등록
+4. 이를 다시 받은 원래 노드는 응답받은 맥주소를 **ARP 캐시 테이블**에 등록
 -> MAC주소를 알아온 뒤에 다음 통신이 시작됨. 최초 통신의 경우 한 번 실행된 다음 통신이 시작되는 것
 
 ---
@@ -72,7 +72,7 @@ categories: Network
 **참고link**
 
 **0. IPv6**
-- [https://movefast.tistory.com/53](https://movefast.tistory.com/53)
+ - [https://movefast.tistory.com/53](https://movefast.tistory.com/53)
 
 
 **1. ARP 프로토콜**
@@ -82,4 +82,4 @@ categories: Network
 
 **2. Gateway vs Router**
 
-[https://puzzle-puzzle.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9A%A9%EC%96%B4-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4-Gateway-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4%EC%99%80-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EC%B0%A8%EC%9D%B4%EC%A0%90](https://puzzle-puzzle.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9A%A9%EC%96%B4-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4-Gateway-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4%EC%99%80-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EC%B0%A8%EC%9D%B4%EC%A0%90)
+ - [https://puzzle-puzzle.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9A%A9%EC%96%B4-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4-Gateway-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4%EC%99%80-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EC%B0%A8%EC%9D%B4%EC%A0%90](https://puzzle-puzzle.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9A%A9%EC%96%B4-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4-Gateway-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4%EC%99%80-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EC%B0%A8%EC%9D%B4%EC%A0%90)
