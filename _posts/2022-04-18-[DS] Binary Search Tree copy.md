@@ -11,10 +11,8 @@ categories: DataStructure
 
 ---
 
-<aside>
 💡 이진 <u>탐색</u> 트리는 이름에서 알 수 있듯이, 삽입이나 삭제보다는 탐색에 주 목적을 둔 자료구조이다.
 {: .notice}
-</aside>
 
 ## Search Tree
 
@@ -23,19 +21,16 @@ categories: DataStructure
 - 사전을 구현하는 데에 이상적인 구조
 - 순차적 또는 등급별 데이터 접근에 이상적
 
-<aside>
 💡 빈출! 이진 트리와 이진 탐색 트리의 차이점
-
-- **이진 트리**
-    
-    : 노드의 최대 Branch가 2인 트리
-    
-- **이진 탐색 트리 (Binary Search Tree, BST)**
-    
-    : 이진 트리에 추가적인 조건이 있는 트리
-      ⇒ 조건 : 왼쪽 노드는 해당 노드보다 작은 값, 오른쪽 노드는 해당 노드보다 큰 값을 가지고 있음.
-    
-</aside>
+    <br>
+    - **이진 트리**    
+        : 노드의 최대 Branch가 2인 트리
+    <br>
+    - **이진 탐색 트리 (Binary Search Tree, BST)**
+        : 이진 트리에 추가적인 조건이 있는 트리
+            <br>
+        ⇒ 조건 : 왼쪽 노드는 해당 노드보다 작은 값, 오른쪽 노드는 해당 노드보다 큰 값을 가지고 있음.
+{.:notice}    
 
 <br>
 
@@ -69,10 +64,9 @@ categories: DataStructure
 
 <details>
     <summary>Python 구현</summary>
-    <div markdown="1">
     클래스 정의 및 초기화
+    <div markdown="1">
     
-    ```python
     class Node(object):                       # 먼저 Node 클래스를 정의
         def __init__(self, data):
             self.data = data
@@ -81,20 +75,19 @@ categories: DataStructure
     class BinarySearchTree(object):
         def __init__(self):
             self.root = None                # 처음에는 비어 있는 트리로 초기화
-    ```
     </div>
 </details>
 
 <br>
 
-### `**Ascend()**`
+### **`Ascend()`**
 
 > 모든 요소를 key의 오름차순으로 출력
 > 
 
 <br>
 
-### `**Find(key)**`
+### **`Find(key)`**
 
 > 탐색
 > 
@@ -106,11 +99,10 @@ categories: DataStructure
 - 루트가 NULL이면 탐색 트리가 트리가 비어 있어 탐색 실패
 - 시간 복잡도 O(height)
 <details>
-    <summary>Python 구현 : `find()` Method</summary>
-    <div markdown="1">
+    <summary>Python 구현 : find() Method</summary>
     재귀와 값의 대소관계 비교를 통해 구현할 수 있다.
+    <div markdown="1">
     
-    ```python
     class BinarySearchTree(object):
         ...
         def find(self, key):
@@ -122,13 +114,12 @@ categories: DataStructure
                 return self._find_value(root.left, key)
             else:
                 return self._find_value(root.right, key)
-    ```
 </div>
 </details>
 
 <br>
 
-### `**Insert(key)**`
+### **`Insert(key)`**
 
 > 삽입
 > 
@@ -138,12 +129,10 @@ categories: DataStructure
 - 이진 검색 트리에 새 요소 e를 삽입하려면 먼저 트리에서 탐색을 수행하여 key가 이미 존재하지 않는지 확인해야 한다.
 - 탐색이 성공하면 삽입하지 않으며, 탐색에 실패하면 요소가 검색이 종료된 지점에 삽입된다.
     
-    <aside>
     💡 왜 그 지점에 삽입되는가?
-    
+    <br>
     탐색의 원리를 이해했으면 쉽다. 탐색 중 루트가 NULL으로 트리가 비어있는 경우 탐색에 실패하기 때문
     {: .notice}
-    </aside>
     
 - 시간 복잡도 O(height)
 - ex: insert key=7
@@ -151,11 +140,11 @@ categories: DataStructure
     ![Untitled 1](https://user-images.githubusercontent.com/100582309/164374876-e33e8848-e06a-4dbe-82a5-31bde948428e.png)
     
     <details>
-        <summary>Python 구현 : `Insert` Method</summary>
-        <div markdown="1">
+        <summary>Python 구현 : Insert Method</summary>
         재귀를 이용해서 구현하면 간단하다. 새로 추가할 원소의 값을 현재 노드의 값과 비교하여 왼쪽/오른쪽 중 알맞은 위치로 노드를 옮겨가면서 삽입 위치를 확인한다.
+        <div markdown="1">
         
-        ```python
+
         class BinarySearchTree(object):
             ...
             def insert(self, data):
@@ -170,7 +159,6 @@ categories: DataStructure
                     else:
                         node.right = self._insert_value(node.right, data)
                 return node
-        ```
         </div>
     </details>
 
@@ -191,91 +179,92 @@ categories: DataStructure
         ![Untitled 2](https://user-images.githubusercontent.com/100582309/164374880-e3b3ac2f-b32a-4a1a-8c7e-9b76e22867a0.png)
 
         
+    <br>
+    
 
 - **case 2** : 요소가 차수 1의 노드에 있다(즉, 비어 있지 않은 서브트리가 하나 존재).
-    - delete key=40
+    - **delete key=40**
         ![Untitled 3](https://user-images.githubusercontent.com/100582309/164374882-04af48c6-a4fa-4e2e-90a6-06e4a641259e.png)
 
-        
+    <br>
     
-    - delete key=15
+    - **delete key=15**
         ![Untitled 4](https://user-images.githubusercontent.com/100582309/164374884-0bba8215-56eb-4fc6-98d5-056719c2ea29.png)
 
+    
+    <br>
         
 
 - **case 3** : 요소가 차수 2의 노드에 있다 (즉, 비어 있지 않은 두 개의 서브트리가 존재).
     - ex 1) delete key=10s
         | ![Untitled 5](https://user-images.githubusercontent.com/100582309/164374888-ca9c9854-4be8-4db0-bc79-165828fcf0a9.png) | 
         |:--:| 
-        |step 1|
-        
+        |step 1|  
+        <br>
         | ![Untitled 6](https://user-images.githubusercontent.com/100582309/164374890-2045f033-f222-4fd0-b454-9349b16df789.png) | 
         |:--:| 
         |step 2. 왼쪽 서브트리에서 가장 큰 key(또는 오른쪽 하위 트리에서 가장 작은 key)로 대체|
-
+        <br>
         | ![Untitled 7](https://user-images.githubusercontent.com/100582309/164374893-5ec236d1-e7f0-4ac6-bef3-4e1042a04722.png) | 
         |:--:| 
         |step 3. 가장 큰 key는 leaf 또는 차수 1인 노드에 있어야 한다.|
-
-    
+    <br>    
     - ex 2) delete key=20
         | ![Untitled 8](https://user-images.githubusercontent.com/100582309/164374895-d2ec36cb-b529-49fe-8427-50413f1e1430.png) | 
         |:--:| 
         |왼쪽 서브트리의 가장 큰 key값으로 대체한다.|
         
         
+<br>       
 - 왼쪽 서브 트리에서 key가 가장 큰 노드(+ 오른쪽 서브 트리에서 key가 가장 작은 노드)는 0 또는 비어 있지 않은 서브 트리가 하나 있는 노드에 있어야 합니다.
     
-    <aside>
-    💡 노드의 왼쪽 서브트리에서 key가 가장 큰 노드를 찾는 방법
-
-    서브 트리의 루트로 이동한 다음 오른쪽 자식의 포인터가 NULL인 노드에 도달할 때까지 계속 오른쪽 자식 포인터를 따라간다.{: .notice}
-    </aside>
+    💡 **노드의 왼쪽 서브트리에서 key가 가장 큰 노드를 찾는 방법**
+    <br>
+    서브 트리의 루트로 이동한 다음 오른쪽 자식의 포인터가 NULL인 노드에 도달할 때까지 계속 오른쪽 자식 포인터를 따라간다.
+    {: .notice}
     
-    <aside>
-    💡 노드의 오른쪽 서브트리에서 key가 가장 작은 노드를 찾는 방법
-    
+    💡 **노드의 오른쪽 서브트리에서 key가 가장 작은 노드를 찾는 방법**
+    <br>
     서브 트리의 루트로 이동한 다음 왼쪽 자식의 포인터가 NULL인 노드에 도달할 때까지 계속 왼쪽 자식 포인터를 따라간다.
     {: .notice}
-    </aside>
     
 - 시간복잡도 : O(height)
 <details>
-    <summary>Python 구현 : `delete()` method</summary>
+    <summary>Python 구현 : delete() method</summary>
     <div markdown="1">
-    ```python
-    class BinarySearchTree(object):
-        ...
-        def delete(self, key):
-            self.root, deleted = self._delete_value(self.root, key)
-            return deleted
-        def _delete_value(self, node, key):
-            if node is None:
-                return node, False
-            deleted = False
-            if key == node.data:
-                deleted = True
-                if node.left and node.right:
-    								# replace the node to the leftmost of node.right
-                    parent, child = node, node.right
-                    while child.left is not None:
-                        parent, child = child, child.left
-                    child.left = node.left
-                    if parent != node:
-                        parent.left = child.right
-                        child.right = node.right
-                    node = child
-                elif node.left or node.right:
-                    node = node.left or node.right
+
+        class BinarySearchTree(object):
+            ...
+            def delete(self, key):
+                self.root, deleted = self._delete_value(self.root, key)
+                return deleted
+            def _delete_value(self, node, key):
+                if node is None:
+                    return node, False
+                deleted = False
+                if key == node.data:
+                    deleted = True
+                    if node.left and node.right:
+                                        # replace the node to the leftmost of node.right
+                        parent, child = node, node.right
+                        while child.left is not None:
+                            parent, child = child, child.left
+                        child.left = node.left
+                        if parent != node:
+                            parent.left = child.right
+                            child.right = node.right
+                        node = child
+                    elif node.left or node.right:
+                        node = node.left or node.right
+                    else:
+                        node = None
+                elif key < node.data:
+                    node.left, deleted = self._delete_value(node.left, key)
                 else:
-                    node = None
-            elif key < node.data:
-                node.left, deleted = self._delete_value(node.left, key)
-            else:
-                node.right, deleted = self._delete_value(node.right, key)
-            return node, deleted
-    ```
-    </div>
+                    node.right, deleted = self._delete_value(node.right, key)
+                return node, deleted
+
+</div>
 </details>
 
 <br>
@@ -345,7 +334,7 @@ categories: DataStructure
 - 루트 노드부터 새로운 노드까지의 leftSize를 업데이트해야 한다.
 - 시간 복잡도는 O(height)
 
-<br>
+<br><br>
 
 ## Binary Search Tree with Duplicates
 
