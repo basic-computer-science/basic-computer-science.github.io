@@ -60,20 +60,25 @@ B트리의 노드를 한 개의 블록 크기와 일치시키고, 넣을 수 있
 ### 다원 탐색트리의 특징
 
 1. 각 노드는 m개 이하의 서브 트리를 갖는다.
+    ![untitled](https://blog.kakaocdn.net/dn/cfsxSP/btq3UGR5kaj/6A0mzskDCDhiNeRLc0LTTK/img.png){:width="800px"}
 
-    ![untitled](https://blog.kakaocdn.net/dn/cfsxSP/btq3UGR5kaj/6A0mzskDCDhiNeRLc0LTTK/img.png){:width="600px"}
+<br>
 
 2. 한 노드안에 최대 m-1개의 요소와 m개의 자식을 가질 수 있다.
 <br>
-→ 사실, 이진 탐색 트리는 m=2 인 다원 탐색 트리이다.
+➡ 사실, 이진 탐색 트리는 m=2 인 다원 탐색 트리이다.
 
 <br>
 
 3. k 개의 자식 노드를 가지는 노드는 k-1개의 요소를 갖습니다. (k ≤ m)
     ![~](https://blog.kakaocdn.net/dn/ekbDzx/btq3TxInGnD/NrDcHTqNvCiMBXa69yXWvK/img.png){:width="600px"}
 
+<Br>
+
 4. 각 노드 안에 있는 키는 오름차순으로 정렬되어 있다.
-    ![~~~](https://blog.kakaocdn.net/dn/bmKZ4Z/btq3YVtYK2Z/KLgH9TCTpVUljDhuNvaiPK/img.png){:width="600px"}
+    ![~~~](https://blog.kakaocdn.net/dn/bmKZ4Z/btq3YVtYK2Z/KLgH9TCTpVUljDhuNvaiPK/img.png){:width="800px"}
+
+<br>
 
 5. 모든 서브 트리는 다원 탐색 트리입니다
 
@@ -82,12 +87,12 @@ B트리의 노드를 한 개의 블록 크기와 일치시키고, 넣을 수 있
 |:--:| 
 |이진 탐색 트리 vs 다원 탐색 트리 (데이터 15개인 경우)|                                    
 
+<Br>
 
 - `장점` : 다원 탐색 트리는 이진 검색 트리보다 많은 요소를 저장할 수 있어 낮은 높이를 유지할 수 있다.
 - `단점` : 다원 탐색 트리는 스스로 균형을 유지하지 못하기 때문에 불균형이 발생할 수 있다는 단점이 있다. 이럴 경우 검색 성능이 떨어지게 된다.
 
-
-이런 다윈 탐색 트리의 단점을 보완하기 위해 스스로 균형을 유지하는 기능이 필요하다. 이를 갖춘 트리로는 대표적으로 B-tree가 있다.
+이런 다원 탐색 트리의 단점을 보완하기 위해 스스로 균형을 유지하는 기능이 필요하다. 이를 갖춘 트리로는 대표적으로 B-tree가 있다.
 
 <br><br>
 
