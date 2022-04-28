@@ -33,8 +33,7 @@ permalink: /about/
   - [Red Black Tree](https://basic-computer-science.github.io/datastructure/2022/04/25/DS-Red-Black-Tree.html)
   - [B-tree](https://basic-computer-science.github.io/datastructure/2022/04/27/DS-B-tree,-B+tree.html)
   - [Trie](https://basic-computer-science.github.io/datastructure/2022/04/28/DS-Trie.html)
-  
-<br>
+
 
 - [알고리즘](https://basic-computer-science.github.io/category/#Algorithm)
   - [Heap sort & Quick sort](https://basic-computer-science.github.io/algorithm/2022/03/03/Heap-Sort,-Quick-Sort.html)
@@ -43,14 +42,11 @@ permalink: /about/
   - [Insertion, Merge, Bubble Sort](https://basic-computer-science.github.io/algorithm/2022/03/04/Insert,Merge,bubble-sort.html)
   - [Binary Search Tree](https://basic-computer-science.github.io/algorithm/2022/03/07/Binary-Search-Tree.html)
 
-<br>
 
 - [운영체제](https://basic-computer-science.github.io/category/#OS)
   - [OS란?](https://basic-computer-science.github.io/os/2022/02/28/What-is-OS.html)
   - [Process & Thread](https://basic-computer-science.github.io/os/2022/03/03/Process-&-Thread.html)
   - [CPU Scheduling](https://basic-computer-science.github.io/os/2022/03/04/CPU-Scheduling.html)
-
-<br>
 
 - [네트워크](https://basic-computer-science.github.io/category/#Network)
   - [컴퓨터 네트워크와 인터넷](https://basic-computer-science.github.io/network/2022/03/03/1st-network.html)
@@ -58,8 +54,6 @@ permalink: /about/
   - [Application Layer-1](https://basic-computer-science.github.io/network/2022/03/04/3nd-network.html)
   - [Application Layer-2](https://basic-computer-science.github.io/network/2022/03/06/4th-network.html)
   - [Transport Layer](https://basic-computer-science.github.io/network/2022/03/07/5th-network.html)
-
-<br>
 
 - [데이터베이스](https://basic-computer-science.github.io/category/#DB)
   - [DB란](https://basic-computer-science.github.io/db/2022/03/01/DB-1.html)
