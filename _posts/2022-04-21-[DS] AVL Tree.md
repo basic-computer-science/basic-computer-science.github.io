@@ -5,8 +5,6 @@ date:   2022-04-21 18:00:00 +0900
 categories: DataStructure
 ---
 
-# [자료구조] AVL Tree
-
 이진검색트리는 저장과 검색에 평균 Θ(log n)시간이 소요되지만 운이 나쁘면 트리의 모양이 균형을 잘 이루지 못한다. 균형이 많이 깨지면 Θ(n)에 근접한 시간이 소요될 수도 있다. 그래서 고안해 낸 것이 **균형잡힌 이진검색트리(Balanced Binary Search Tree)**이다. 균형잡힌 이진검색트리는 최악의 경우에도 이진트리의 균형이 잘 맞도록 유지한다. 균형잡힌 이진검색트리로 대표적인 것은 **AVL트리**와 **레드블랙트리**다.
 
 <br>
@@ -37,7 +35,6 @@ Worst-case의 높이가 O(log n)인 트리를 balanced tree라고 한다. balanc
         
         ![Untitled](https://user-images.githubusercontent.com/100582309/165078428-c0bffb4e-fade-48c1-831f-5449b599e038.png)
 
-        
 
 <br>
 
@@ -55,7 +52,7 @@ Worst-case의 높이가 O(log n)인 트리를 balanced tree라고 한다. balanc
 
 <br>
 
-## AVL Tree의 특징
+## **AVL Tree의 특징**
 
 ---
 
@@ -67,9 +64,10 @@ Worst-case의 높이가 O(log n)인 트리를 balanced tree라고 한다. balanc
 
 <br>
 
-## Balance Factor
+## **Balance Factor**
 
-균형 인수
+>균형 인수
+
 
 ---
 
@@ -85,13 +83,13 @@ Worst-case의 높이가 O(log n)인 트리를 balanced tree라고 한다. balanc
 
 <br>
 
-# AVL Search Tree의 활용
+# **AVL Search Tree의 활용**
 
 ---
 
 <br>
 
-# 탐색
+# **탐색**
 
 ---
 
@@ -101,7 +99,7 @@ Worst-case의 높이가 O(log n)인 트리를 balanced tree라고 한다. balanc
 
 <br>
 
-# 📌 삽입
+# 📌 **삽입**
 
 ---
 
@@ -135,7 +133,7 @@ AVL 탐색 트리에 요소를 삽입하다보면 트리의 균형이 맞지 않
 
 <br>
 
-### **Single Rotation**
+## **Single Rotation**
 
 일반적인 경우의 single rotation은 노드A와 B의 위치를 바꾸어 주고 서브 트리들을 정리하면 균형 트리로 만들 수 있다.
 
@@ -144,22 +142,21 @@ AVL 탐색 트리에 요소를 삽입하다보면 트리의 균형이 맞지 않
 
 <br>
 
-**LL Rotation**
+- **LL Rotation**
 
-루트노드를 자식노드의 오른쪽 서브트리로 붙이면 된다. 오른쪽으로 회전시키는 모양이다. 자식노드에 오른쪽 서브트리가 있을 수 있으므로 오른쪽 서브트리는 루트노드의 왼쪽 서브트리에 연결시킨다.
-![Untitled 5](https://user-images.githubusercontent.com/100582309/165078402-02b544bc-74eb-4c63-a36a-6461c01d0e48.png)
+    루트노드를 자식노드의 오른쪽 서브트리로 붙이면 된다. 오른쪽으로 회전시키는 모양이다. 자식노드에 오른쪽 서브트리가 있을 수 있으므로 오른쪽 서브트리는 루트노드의 왼쪽 서브트리에 연결시킨다.
+    ![Untitled 5](https://user-images.githubusercontent.com/100582309/165078402-02b544bc-74eb-4c63-a36a-6461c01d0e48.png)
 
     
-**RR Rotation**
+- **RR Rotation**
 
-루트노드를 자식노드의 왼쪽 서브트리로 붙이면 된다. 왼쪽으로 회전시키는 모양이다. 자식노드에 왼쪽 서브트리가 있을 수 있다. 이 왼쪽 서브트리를 루트 노드의 오른쪽 서브트리로 만든다.
+    루트노드를 자식노드의 왼쪽 서브트리로 붙이면 된다. 왼쪽으로 회전시키는 모양이다. 자식노드에 왼쪽 서브트리가 있을 수 있다. 이 왼쪽 서브트리를 루트 노드의 오른쪽 서브트리로 만든다.
 
-![Untitled 6](https://user-images.githubusercontent.com/100582309/165078405-e49d430d-3168-4969-bafe-70666a188549.png)
-
+    ![Untitled 6](https://user-images.githubusercontent.com/100582309/165078405-e49d430d-3168-4969-bafe-70666a188549.png)
 
 <br>
 
-### **Double Rotation**
+## **Double Rotation**
 
 ![Untitled 7](https://user-images.githubusercontent.com/100582309/165078408-401ec39f-6b43-4279-af5d-aca8de3dc9be.png)
 
@@ -192,7 +189,7 @@ AVL 탐색 트리에 요소를 삽입하다보면 트리의 균형이 맞지 않
 
 <br>
 
-## 📌 삭제
+## 📌 **삭제**
 
 ---
 

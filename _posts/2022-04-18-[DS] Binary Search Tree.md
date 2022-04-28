@@ -4,37 +4,37 @@ title:  "[Data Structure] Binary Search Tree"
 date:   2022-04-18 18:00:00 +0900
 categories: DataStructure
 ---
-<br>
-# [Python 자료구조] Binary Search Tree
 
-# Binary Search Tree
+# **Binary Search Tree**
 
 ---
 
-💡 이진 <u>탐색</u> 트리는 이름에서 알 수 있듯이, 삽입이나 삭제보다는 탐색에 주 목적을 둔 자료구조이다.
-{: .notice}
+💡 이진 <u>탐색</u> 트리는 이름에서 알 수 있듯이, 삽입이나 삭제보다는 탐색에 주 목적을 둔 자료구조이다. {: .notice}
 
-## Search Tree
+<br>
+
+## **Search Tree**
 
 > 탐색 트리
+> 
 - skip lists와 hash table들과 같거나 그 이상의 성능을 가짐
 - 사전을 구현하는 데에 이상적인 구조
 - 순차적 또는 등급별 데이터 접근에 이상적
 
-💡 빈출! 이진 트리와 이진 탐색 트리의 차이점
-    <br>
-    - **이진 트리**    
-        : 노드의 최대 Branch가 2인 트리
-    <br>
-    - **이진 탐색 트리 (Binary Search Tree, BST)**
-        : 이진 트리에 추가적인 조건이 있는 트리
-            <br>
-        ⇒ 조건 : 왼쪽 노드는 해당 노드보다 작은 값, 오른쪽 노드는 해당 노드보다 큰 값을 가지고 있음.
-{.:notice}    
+    💡 빈출! 이진 트리와 이진 탐색 트리의 차이점
+        <br>
+      - **이진 트리**    
+            : 노드의 최대 Branch가 2인 트리
+        <br>
+      - **이진 탐색 트리 (Binary Search Tree, BST)**
+            : 이진 트리에 추가적인 조건이 있는 트리
+                <br>
+            ⇒ 조건 : 왼쪽 노드는 해당 노드보다 작은 값, 오른쪽 노드는 해당 노드보다 큰 값을 가지고 있음.
+    {.:notice}    
 
 <br>
 
-# Binary Search Tree
+# **Binary Search Tree**
 
 > 이진 탐색 트리
 > 
@@ -56,7 +56,7 @@ categories: DataStructure
 
 <br>
 
-# the **class `BinarySearchTree`**
+## **the class `BinarySearchTree`**
 
 ---
 
@@ -75,7 +75,7 @@ categories: DataStructure
     class BinarySearchTree(object):
         def __init__(self):
             self.root = None                # 처음에는 비어 있는 트리로 초기화
-    </div>
+</div>
 </details>
 
 <br>
@@ -129,10 +129,9 @@ categories: DataStructure
 - 이진 검색 트리에 새 요소 e를 삽입하려면 먼저 트리에서 탐색을 수행하여 key가 이미 존재하지 않는지 확인해야 한다.
 - 탐색이 성공하면 삽입하지 않으며, 탐색에 실패하면 요소가 검색이 종료된 지점에 삽입된다.
     
-    💡 왜 그 지점에 삽입되는가?
-    <br>
-    탐색의 원리를 이해했으면 쉽다. 탐색 중 루트가 NULL으로 트리가 비어있는 경우 탐색에 실패하기 때문
-    {: .notice}
+💡 왜 그 지점에 삽입되는가?
+<br>
+탐색의 원리를 이해했으면 쉽다. 탐색 중 루트가 NULL으로 트리가 비어있는 경우 탐색에 실패하기 때문{: .notice}
     
 - 시간 복잡도 O(height)
 - ex: insert key=7
@@ -144,7 +143,6 @@ categories: DataStructure
         재귀를 이용해서 구현하면 간단하다. 새로 추가할 원소의 값을 현재 노드의 값과 비교하여 왼쪽/오른쪽 중 알맞은 위치로 노드를 옮겨가면서 삽입 위치를 확인한다.
         <div markdown="1">
         
-
         class BinarySearchTree(object):
             ...
             def insert(self, data):
@@ -159,12 +157,12 @@ categories: DataStructure
                     else:
                         node.right = self._insert_value(node.right, data)
                 return node
-        </div>
+    </div>
     </details>
 
 <br>
 
-### `Delete(key)`
+### **`Delete(key)`**
 
 > 삭제
 > 
@@ -208,26 +206,31 @@ categories: DataStructure
         | ![Untitled 7](https://user-images.githubusercontent.com/100582309/164374893-5ec236d1-e7f0-4ac6-bef3-4e1042a04722.png) | 
         |:--:| 
         |step 3. 가장 큰 key는 leaf 또는 차수 1인 노드에 있어야 한다.|
+
     <br>    
+
     - ex 2) delete key=20
+
         | ![Untitled 8](https://user-images.githubusercontent.com/100582309/164374895-d2ec36cb-b529-49fe-8427-50413f1e1430.png) | 
         |:--:| 
         |왼쪽 서브트리의 가장 큰 key값으로 대체한다.|
         
-        
-<br>       
+
 - 왼쪽 서브 트리에서 key가 가장 큰 노드(+ 오른쪽 서브 트리에서 key가 가장 작은 노드)는 0 또는 비어 있지 않은 서브 트리가 하나 있는 노드에 있어야 합니다.
-    
-    💡 **노드의 왼쪽 서브트리에서 key가 가장 큰 노드를 찾는 방법**
-    <br>
-    서브 트리의 루트로 이동한 다음 오른쪽 자식의 포인터가 NULL인 노드에 도달할 때까지 계속 오른쪽 자식 포인터를 따라간다.
-    {: .notice}
-    
-    💡 **노드의 오른쪽 서브트리에서 key가 가장 작은 노드를 찾는 방법**
-    <br>
-    서브 트리의 루트로 이동한 다음 왼쪽 자식의 포인터가 NULL인 노드에 도달할 때까지 계속 왼쪽 자식 포인터를 따라간다.
-    {: .notice}
-    
+
+<BR>
+
+**💡 노드의 왼쪽 서브트리에서 key가 가장 큰 노드를 찾는 방법**
+<br>
+서브 트리의 루트로 이동한 다음 오른쪽 자식의 포인터가 NULL인 노드에 도달할 때까지 계속 오른쪽 자식 포인터를 따라간다.
+{: .notice}
+
+**💡 노드의 오른쪽 서브트리에서 key가 가장 작은 노드를 찾는 방법**
+<br>
+서브 트리의 루트로 이동한 다음 왼쪽 자식의 포인터가 NULL인 노드에 도달할 때까지 계속 왼쪽 자식 포인터를 따라간다.
+{: .notice}
+<br>
+
 - 시간복잡도 : O(height)
 <details>
     <summary>Python 구현 : delete() method</summary>
@@ -281,9 +284,9 @@ categories: DataStructure
     ⇒ 최악의 경우 모든 데이터를 살펴야 할 수도 있어 시간복잡도가 `O(n)`이 된다.
     
 
-<br>
+<br><br>
 
-# Indexed Binary Search Trees
+# **Indexed Binary Search Trees**
 
 ---
 
@@ -298,7 +301,7 @@ categories: DataStructure
 
 <br>
 
-### LeftSize와 Rank
+### **LeftSize와 Rank**
 
 - 요소의 rank 즉, 순위는 오름차순 순서에 따른 위치를 가리킨다.
     
@@ -319,16 +322,16 @@ categories: DataStructure
     `insert(index, element)`
     
 
-![Untitled 11](https://user-images.githubusercontent.com/100582309/164374900-b1589997-8955-43e9-a743-668a0f1e3f87.png)
+    ![Untitled 11](https://user-images.githubusercontent.com/100582309/164374900-b1589997-8955-43e9-a743-668a0f1e3f87.png)
 
 
-![Untitled 12](https://user-images.githubusercontent.com/100582309/164374903-eb85d21c-e47e-424a-ad53-f3cf2ec4b50c.png)
+    ![Untitled 12](https://user-images.githubusercontent.com/100582309/164374903-eb85d21c-e47e-424a-ad53-f3cf2ec4b50c.png)
 
 
-![Untitled 13](https://user-images.githubusercontent.com/100582309/164374904-c5000753-2bfd-4ab0-b082-14cdb7256d0a.png)
+    ![Untitled 13](https://user-images.githubusercontent.com/100582309/164374904-c5000753-2bfd-4ab0-b082-14cdb7256d0a.png)
 
 
-![Untitled 14](https://user-images.githubusercontent.com/100582309/164374907-fe8095d6-e884-4aa9-b2b8-40c225d8af50.png)
+    ![Untitled 14](https://user-images.githubusercontent.com/100582309/164374907-fe8095d6-e884-4aa9-b2b8-40c225d8af50.png)
 
 - 여러 가능성이 존재할 수 있다.
 - 루트 노드부터 새로운 노드까지의 leftSize를 업데이트해야 한다.
@@ -336,7 +339,7 @@ categories: DataStructure
 
 <br><br>
 
-## Binary Search Tree with Duplicates
+## **Binary Search Tree with Duplicates**
 
 중복이 있는 이진 탐색 트리
 
@@ -357,9 +360,5 @@ all keys in the right subtree of x are **larger** than that in x
 <br>
 <br>
 
-<details>
-    <summary>참고자료</summary>
-    <div markdown="1">
-    - [https://geonlee.tistory.com/72](https://geonlee.tistory.com/72)
-    </div>
-    </details>
+### 참고자료
+- [https://geonlee.tistory.com/72](https://geonlee.tistory.com/72)
