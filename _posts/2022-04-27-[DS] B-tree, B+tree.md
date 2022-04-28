@@ -5,7 +5,7 @@ date:   2022-04-27 10:00:00 +0900
 categories: DataStructure
 ---
 
-## DB에서는 왜 이진 탐색 트리가 아닌 다원 탐색 트리, 그 중 Btree를 많이 사용하는가?**
+## **DB에서는 왜 이진 탐색 트리가 아닌 다원 탐색 트리, 그 중 Btree를 많이 사용하는가?**
 ---
 
 우선, 이진 탐색 트리를 사용하면 n개의 원소에서 특정 값을 검색하는데에 O(log n)이므로 매우 빠르다. 하지만, **현대 컴퓨터에서는 산술, 논리 연산보다는 메모리 접근 연산이 훨씬 많은 시간을 소모한다.** 이게 무슨 뜻인지 살펴보자.
@@ -55,23 +55,25 @@ B트리의 노드를 한 개의 블록 크기와 일치시키고, 넣을 수 있
 
 ---
 
-![Untitled](https://user-images.githubusercontent.com/100582309/165692065-97645313-0241-4ec4-a0c4-63b5bd0a9284.png)
+![Untitled](https://user-images.githubusercontent.com/100582309/165692065-97645313-0241-4ec4-a0c4-63b5bd0a9284.png){:width="600px"}
 
 ### 다원 탐색트리의 특징
 
 1. 각 노드는 m개 이하의 서브 트리를 갖는다.
 
-    ![untitled](https://blog.kakaocdn.net/dn/cfsxSP/btq3UGR5kaj/6A0mzskDCDhiNeRLc0LTTK/img.png)
+    ![untitled](https://blog.kakaocdn.net/dn/cfsxSP/btq3UGR5kaj/6A0mzskDCDhiNeRLc0LTTK/img.png){:width="600px"}
 
 2. 한 노드안에 최대 m-1개의 요소와 m개의 자식을 가질 수 있다.
 <br>
 → 사실, 이진 탐색 트리는 m=2 인 다원 탐색 트리이다.
 
+<br>
+
 3. k 개의 자식 노드를 가지는 노드는 k-1개의 요소를 갖습니다. (k ≤ m)
-![~](https://blog.kakaocdn.net/dn/ekbDzx/btq3TxInGnD/NrDcHTqNvCiMBXa69yXWvK/img.png)
+    ![~](https://blog.kakaocdn.net/dn/ekbDzx/btq3TxInGnD/NrDcHTqNvCiMBXa69yXWvK/img.png){:width="600px"}
 
 4. 각 노드 안에 있는 키는 오름차순으로 정렬되어 있다.
-![~~~](https://blog.kakaocdn.net/dn/bmKZ4Z/btq3YVtYK2Z/KLgH9TCTpVUljDhuNvaiPK/img.png)
+    ![~~~](https://blog.kakaocdn.net/dn/bmKZ4Z/btq3YVtYK2Z/KLgH9TCTpVUljDhuNvaiPK/img.png){:width="600px"}
 
 5. 모든 서브 트리는 다원 탐색 트리입니다
 
@@ -114,13 +116,11 @@ B트리는 이진트리와 다르게 하나의 노드에 많은 수의 정보를
     
     (최소차수 *t*가 2라면 3차 B트리이며, key의 하한은 1개입니다.)
     
-     → m=3일 때, B 트리의 모든 내부 노드의 차수는 2 또는 3 (**2-3 tree**)
+     → m=3일 때, B 트리의 모든 내부 노드의 차수는 2 또는 3 (**2-3 tree**), m=4일 때, B 트리의 모든 내부 노드의 차수는 2 또는 3 또는 4 (**2-3-4 tree**)
     
-    m=4일 때, B 트리의 모든 내부 노드의 차수는 2 또는 3 또는 4 (**2-3-4 tree**)
+    ![Untitled 1](https://user-images.githubusercontent.com/100582309/165692066-7897d8d0-a824-4fa6-ade1-a5a2f70cb0f7.png){:width="600px"}
     
-    ![Untitled 1](https://user-images.githubusercontent.com/100582309/165692066-7897d8d0-a824-4fa6-ade1-a5a2f70cb0f7.png)
-    
-    | ![Untitled 2](https://user-images.githubusercontent.com/100582309/165692068-86421515-fb16-4108-b5bb-4070fba50464.png) | 
+    | ![Untitled 2](https://user-images.githubusercontent.com/100582309/165692068-86421515-fb16-4108-b5bb-4070fba50464.png){:width="600px"} | 
     |:--:| 
     |차수가 3인 B트리|
 
@@ -146,9 +146,9 @@ B트리는 이진트리와 다르게 하나의 노드에 많은 수의 정보를
     
 2. 해당 과정을 **리프노드에 도달할 때까지 반복**한다. 만일 리프노드에도 *k*와 같은 key가 없다면 검색을 실패한다.
 
-![Untitled 3](https://user-images.githubusercontent.com/100582309/165692070-6d18a9a0-cd30-44bb-985c-13e30cb35c55.png)
+![Untitled 3](https://user-images.githubusercontent.com/100582309/165692070-6d18a9a0-cd30-44bb-985c-13e30cb35c55.png){:width="600px"}
 
-![Untitled 4](https://user-images.githubusercontent.com/100582309/165692073-0867fd09-cb32-4f79-ac56-75fd912c16b2.png)
+![Untitled 4](https://user-images.githubusercontent.com/100582309/165692073-0867fd09-cb32-4f79-ac56-75fd912c16b2.png){:width="600px"}
 
 <br>
 
@@ -172,7 +172,7 @@ key를 삽입하기 위해서는 **1. 요소 삽입에 적절한 리프 노드�
 
 ---
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F95b4c5c3-c267-4423-865e-778a68ad4a50%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%201-1.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F95b4c5c3-c267-4423-865e-778a68ad4a50%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%201-1.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F95b4c5c3-c267-4423-865e-778a68ad4a50%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%201-1.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F95b4c5c3-c267-4423-865e-778a68ad4a50%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%201-1.png){:width="600px"}
 
 <br>
 
@@ -187,11 +187,11 @@ key를 삽입하기 위해서는 **1. 요소 삽입에 적절한 리프 노드�
 2. **중앙값에서 분할을 수행한다**. 중앙값은 부모 노드로 **병합하거나 새로 생성된**다. 왼쪽 키들은 왼쪽 자식으로, 오른쪽 키들은 오른쪽 자식으로 **분할된**다.
 3. 부모 노드를 검사해서 또 다시 가득 찼다면, 다시 부모노드에서 위 과정을 반복한다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F4b5003e5-55de-441c-a3ee-15e4db7a2abd%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-1.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F4b5003e5-55de-441c-a3ee-15e4db7a2abd%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-1.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F4b5003e5-55de-441c-a3ee-15e4db7a2abd%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-1.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F4b5003e5-55de-441c-a3ee-15e4db7a2abd%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-1.png){:width="600px"}
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F13ab96a4-04cc-42a7-bb01-eac1276bdf67%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-2.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F13ab96a4-04cc-42a7-bb01-eac1276bdf67%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-2.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F13ab96a4-04cc-42a7-bb01-eac1276bdf67%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-2.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F13ab96a4-04cc-42a7-bb01-eac1276bdf67%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-2.png){:width="600px"}
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd99cdbc8-c5b4-4667-be7d-2589adca45e8%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-3.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd99cdbc8-c5b4-4667-be7d-2589adca45e8%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-3.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd99cdbc8-c5b4-4667-be7d-2589adca45e8%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-3.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd99cdbc8-c5b4-4667-be7d-2589adca45e8%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%BD%EC%9E%85%202-3.png){:width="600px"}
 
 <br><br>
 
@@ -214,7 +214,7 @@ key를 삽입하기 위해서는 **1. 요소 삽입에 적절한 리프 노드�
 
 ➡ 다른 노드들에 영향 없이 해당 *k*를 **단순 삭제**합니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fe0e2045e-33a2-439f-a781-f6f9af8d0b66%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-1.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fe0e2045e-33a2-439f-a781-f6f9af8d0b66%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-1.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fe0e2045e-33a2-439f-a781-f6f9af8d0b66%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-1.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fe0e2045e-33a2-439f-a781-f6f9af8d0b66%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-1.png){:width="600px"}
 
 <br>
 
@@ -223,14 +223,14 @@ key를 삽입하기 위해서는 **1. 요소 삽입에 적절한 리프 노드�
 1. 부모 key 값으로 *k*를 대체합니다.
 2. 최소key 개수 이상의 key를 가진 형제 노드가 왼쪽 형제라면 가장 큰 값을, 오른쪽 형제라면 가장 작은 값을 부모key로 대체합니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F8e7b0f78-ae26-48df-8925-47171c588c48%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-2.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F8e7b0f78-ae26-48df-8925-47171c588c48%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-2.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F8e7b0f78-ae26-48df-8925-47171c588c48%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-2.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F8e7b0f78-ae26-48df-8925-47171c588c48%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-2.png){:width="600px"}
 
 **Case 1.3) 왼쪽, 오른쪽 형제 노드의 key가 최소 key 개수이고, 부모노드의 key가 최소개수 이상이면**
 
 1. *k*를 삭제한 후, 부모key를 형제 노드와 병합합니다.
 2. 부모노드의 key개수를 하나 줄이고, 자식 수 역시 하나를 줄여 **B-Tree를 유지**합니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fdde5e5ae-892c-4d1c-9299-4710023f7531%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-3.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fdde5e5ae-892c-4d1c-9299-4710023f7531%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-3.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fdde5e5ae-892c-4d1c-9299-4710023f7531%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-3.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fdde5e5ae-892c-4d1c-9299-4710023f7531%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%201-3.png){:width="600px"}
 
 **Case 1.4) 자신과 형제, 부모 노드의 key 개수가 모두 최소 key 개수라면**
 
@@ -243,7 +243,7 @@ key를 삽입하기 위해서는 **1. 요소 삽입에 적절한 리프 노드�
 1. 현재 노드의 `inorder predecessor` 또는 `inorder successor`와 *k*의 자리를 바꿉니다.
 2. 리프노드의 *k*를 삭제하게 되면, 리프노드가 삭제 되었을 때의 조건으로 변합니다. 삭제한 리프노드에 대해서 case 1 조건으로 이동합니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F6d4a5d37-1633-45a1-8225-c6e558031865%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%202.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F6d4a5d37-1633-45a1-8225-c6e558031865%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%202.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F6d4a5d37-1633-45a1-8225-c6e558031865%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%202.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F6d4a5d37-1633-45a1-8225-c6e558031865%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%202.png){:width="600px"}
 
 <br>
 
@@ -255,13 +255,13 @@ key를 삽입하기 위해서는 **1. 요소 삽입에 적절한 리프 노드�
 2. *k*의 부모key를 인접한 형제 노드에 붙입니다. 이후, 이전에 병합했던 노드를 자식노드로 설정합니다.
 3. 해당 과정을 수행하였을 때 부모노드의 개수가 에 따라 이후 수행 과정이 달라집니다.3-1. 만일 새로 구성된 인접 형제노드의 key가 최대 key 개수를 넘어갔다면, 삽입 연산의 **노드 분할 과정을 수행**합니다.3-2. 만일 인접 형제노드가 새로 구성되더라도 원래 *k*의 부모 노드가 최소 key의 개수보다 작아진다면, **부모 노드에 대하여 2번 과정부터 다시 수행**합니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F84dbc50f-fff4-4207-8e27-a34b9043f798%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%203-1.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F84dbc50f-fff4-4207-8e27-a34b9043f798%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%203-1.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F84dbc50f-fff4-4207-8e27-a34b9043f798%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%203-1.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F84dbc50f-fff4-4207-8e27-a34b9043f798%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%203-1.png){:width="600px"}
 
 <br>
 
 ⇒ 새로운 트리에서 예시
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fe2f82f30-2f9c-4177-a908-1b5333f8e9d6%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%203-2.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fe2f82f30-2f9c-4177-a908-1b5333f8e9d6%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%203-2.png)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fe2f82f30-2f9c-4177-a908-1b5333f8e9d6%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%203-2.png](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fe2f82f30-2f9c-4177-a908-1b5333f8e9d6%2FB%ED%8A%B8%EB%A6%AC%20%EC%82%AD%EC%A0%9C%203-2.png){:width="600px"}
 
 <br><br>
 
@@ -290,7 +290,9 @@ B+tree는 B-tree의 변형 구조로, **index 부분**과 **리프 노드로 
 
 💡 실제 **DB의 인덱싱은 B+트리**로 이루어져있다고 한다. 다음 그림은 인덱싱을 나타낸 것이다. 인덱싱은 어떠한 자료를 찾는데 key값을 이용해 효과적으로 찾을 수 있는 기능이다.
 ![Untitled 5](https://user-images.githubusercontent.com/100582309/165692074-35ea7971-894e-49fd-88aa-ab9dbd3fb7b9.png)
+<br>
 다음과 같은 인덱싱을 **B+트리**로 나타내면 아래 그림과 같습니다.
+<br>
 ![Untitled 6](https://user-images.githubusercontent.com/100582309/165692057-b3f1e320-73a7-4a45-8b24-db2288328d77.png)
 {: .notice}
 
@@ -300,7 +302,7 @@ B+tree는 B-tree의 변형 구조로, **index 부분**과 **리프 노드로 
 
 ---
 
-![Untitled 7](https://user-images.githubusercontent.com/100582309/165692061-83de8de1-6b54-4a80-8b13-2fbad25e3af2.png)
+![Untitled 7](https://user-images.githubusercontent.com/100582309/165692061-83de8de1-6b54-4a80-8b13-2fbad25e3af2.png){:width="600px"}
 
 
 ### B+tree가 B-tree와 다른 점
@@ -321,14 +323,16 @@ B+tree는 B-tree의 변형 구조로, **index 부분**과 **리프 노드로 
     
     key 값을 기준으로 **오른쪽 pointer**는 key 값보다 **크거나 같은** key 값의 노드를 가리킨다.
     
+<br>
 
-💬 **B+tree가 B-tree와 같은 점 (*m*차 B+트리에 대하여)**
-- 노드는 최대 *m*개 부터 *m*/2개 까지의 자식을 가질 수 있다.
-- 노드에는 최대 *m*−1개 부터 [*m*/2]−1개의 키가 포함될 수 있다.
-- 노드의 키가 *x*개라면 자식의 수는 *x*+1개이다.
-- 최소차수는 자식수의 하한값을 의미하며, 최소차수가 *t*면 *m*=2*t*−1을 만족한다.
-    (최소차수 *t*가 2라면 3차 B트리이며, key의 하한은 1개이다.)
-{: .notice}
+ **💬 B+tree가 B-tree와 같은 점 (*m*차 B+트리에 대하여)**
+   - 노드는 최대 *m*개 부터 *m*/2개 까지의 자식을 가질 수 있다.
+   - 노드에는 최대 *m*−1개 부터 [*m*/2]−1개의 키가 포함될 수 있다.
+   - 노드의 키가 *x*개라면 자식의 수는 *x*+1개이다.
+   - 최소차수는 자식수의 하한값을 의미하며, 최소차수가 *t*면 *m*=2*t*−1을 만족한다.
+     <br>
+     (최소차수 *t*가 2라면 3차 B트리이며, key의 하한은 1개이다.)
+ {: .notice}
 
 <br>
 
@@ -370,7 +374,7 @@ B트리와 똑같은 삽입 과정을 수행합니다.
 
 삽입 후 **부모 key를 삽입된 key로 갱신**하고, data를 넣어줍니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd69592b9-c14e-4cc5-ad7b-4ea36120035c%2F%EC%82%BD%EC%9E%85%202-1.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd69592b9-c14e-4cc5-ad7b-4ea36120035c%2F%EC%82%BD%EC%9E%85%202-1.jpg)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd69592b9-c14e-4cc5-ad7b-4ea36120035c%2F%EC%82%BD%EC%9E%85%202-1.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd69592b9-c14e-4cc5-ad7b-4ea36120035c%2F%EC%82%BD%EC%9E%85%202-1.jpg){:width="600px"}
 
 <Br>
 
@@ -379,9 +383,9 @@ B트리와 똑같은 삽입 과정을 수행합니다.
 1. 분할이 일어나는 노드가 **리프노드가 아니라면** 기존 B트리와 똑같이 분할을 진행합니다. 중간 key를 부모 key로 올리고, 분할한 두개의 노드를 왼쪽, 오른쪽 자식으로 설정합니다.
 2. 분할이 일어나는 노드가 **리프노드라면** 중간 key를 부모 key로 올리지만, 오른쪽 노드에 **중간 key를 포함하여 분할**합니다. 또한 리프노드는 연결리스트이기 때문에 **왼쪽 자식노드와 오른쪽 자식 노드를 이어줘 연결리스트 형태를 유지합니다.** 해당 부분이 B트리의 분할과 다른 점입니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F251a8b34-b943-41c2-9391-3fea1d9a5b29%2F%EC%82%BD%EC%9E%85%203-1.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F251a8b34-b943-41c2-9391-3fea1d9a5b29%2F%EC%82%BD%EC%9E%85%203-1.jpg)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F251a8b34-b943-41c2-9391-3fea1d9a5b29%2F%EC%82%BD%EC%9E%85%203-1.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F251a8b34-b943-41c2-9391-3fea1d9a5b29%2F%EC%82%BD%EC%9E%85%203-1.jpg){:width="600px"}
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd4b9cb28-1b18-4ac1-802c-020dee95ffb9%2F%EC%82%BD%EC%9E%85%203-2.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd4b9cb28-1b18-4ac1-802c-020dee95ffb9%2F%EC%82%BD%EC%9E%85%203-2.jpg)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd4b9cb28-1b18-4ac1-802c-020dee95ffb9%2F%EC%82%BD%EC%9E%85%203-2.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fd4b9cb28-1b18-4ac1-802c-020dee95ffb9%2F%EC%82%BD%EC%9E%85%203-2.jpg){:width="600px"}
 
 <Br>
 
@@ -397,7 +401,7 @@ B트리와 똑같은 삽입 과정을 수행합니다.
 
 기존의 B트리 삭제과정과 동일합니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fce1bbae2-3ade-4970-854d-e7ad9f526283%2F%EC%82%AD%EC%A0%9C%201.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fce1bbae2-3ade-4970-854d-e7ad9f526283%2F%EC%82%AD%EC%A0%9C%201.jpg)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fce1bbae2-3ade-4970-854d-e7ad9f526283%2F%EC%82%AD%EC%A0%9C%201.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2Fce1bbae2-3ade-4970-854d-e7ad9f526283%2F%EC%82%AD%EC%A0%9C%201.jpg){:width="600px"}
 
 <br>
 
@@ -409,9 +413,9 @@ B트리와 똑같은 삽입 과정을 수행합니다.
 1. 먼저 리프노드의 *k*를 삭제하는 과정을 수행합니다. key의 개수가 최소 key의 개수라면 B트리의 삭제 과정 중 형제노드의 key를 빌려오는 경우나 부모key와 병합하는 등 과정들은 **동일하게 수행**합니다. 단, **리프노드가 병합**할 때는 부모key와 오른쪽 자식의 처음 key가 동일하기 때문에 부모key를 가져오는 과정만 생략하고 **왼쪽 자식과 오른쪽 자식을 병합**만 하면 됩니다.
 2. 리프노드의 k를 삭제한 후, index내의 *k*를 **`inorder successor`로 변경**합니다.
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F25579855-5b0f-4cbb-a400-9fb5a5645d0d%2F%EC%82%AD%EC%A0%9C%202-1.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F25579855-5b0f-4cbb-a400-9fb5a5645d0d%2F%EC%82%AD%EC%A0%9C%202-1.jpg)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F25579855-5b0f-4cbb-a400-9fb5a5645d0d%2F%EC%82%AD%EC%A0%9C%202-1.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F25579855-5b0f-4cbb-a400-9fb5a5645d0d%2F%EC%82%AD%EC%A0%9C%202-1.jpg){:width="600px"}
 
-![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F1e256a60-912f-4369-8444-e74c535ecc3c%2F%EC%82%AD%EC%A0%9C%202-2.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F1e256a60-912f-4369-8444-e74c535ecc3c%2F%EC%82%AD%EC%A0%9C%202-2.jpg)
+![https://velog.velcdn.com/images%2Femplam27%2Fpost%2F1e256a60-912f-4369-8444-e74c535ecc3c%2F%EC%82%AD%EC%A0%9C%202-2.jpg](https://velog.velcdn.com/images%2Femplam27%2Fpost%2F1e256a60-912f-4369-8444-e74c535ecc3c%2F%EC%82%AD%EC%A0%9C%202-2.jpg){:width="600px"}
 
 <br><br>
 
