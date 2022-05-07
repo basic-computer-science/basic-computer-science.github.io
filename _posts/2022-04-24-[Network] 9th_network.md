@@ -54,7 +54,7 @@ categories: Network
 #### 4-8. gateway vs router
 
 |Network equipment|Router|Gateway|
-|------|---|---|
+|------|:---:|:---:|
 |주요 기능|올바른 목적지 주소로 데이터 패킷을 전송시킨다.|서로 다른 프로토콜을 사용하는 두 네트워크를 연결하기 위해 사용하는 translator 기능|
 |OSI 계층|주로 3계층(LAN과 WAN을 연결하는데 사용)|프로토콜이 다른 네트워크(Layer 4)를 연결할 때 사용|
 |Protocol|하나의 프로토콜 사용|하나 이상의 프로토콜 사용| 
