@@ -26,13 +26,15 @@ permalink: /about/
   - [Recursion](https://basic-computer-science.github.io/datastructure/2022/03/02/DS-Recursion.html)
   - [Stack](https://basic-computer-science.github.io/datastructure/2022/03/04/DS-Stack.html)
   - [Queue](https://basic-computer-science.github.io/datastructure/2022/03/07/DS-Queue.html)
-  - [Priority Queue](https://basic-computer-science.github.io/datastructure/2022/03/11/DS-Priority-Queue.html)
+  - [Priority Queue and Heap](https://basic-computer-science.github.io/datastructure/2022/03/11/DS-Priority-Queue-and-Heap.html)
   - [Tree](https://basic-computer-science.github.io/datastructure/2022/04/14/DS-Tree.html)
   - [Binary Search Tree](https://basic-computer-science.github.io/datastructure/2022/04/18/DS-Binary-Search-Tree.html)
   - [AVL tree](https://basic-computer-science.github.io/datastructure/2022/04/21/DS-AVL-Tree.html)
   - [Red Black Tree](https://basic-computer-science.github.io/datastructure/2022/04/25/DS-Red-Black-Tree.html)
   - [B-tree](https://basic-computer-science.github.io/datastructure/2022/04/27/DS-B-tree,-B+tree.html)
   - [Trie](https://basic-computer-science.github.io/datastructure/2022/04/28/DS-Trie.html)
+  - [Graph](https://basic-computer-science.github.io/datastructure/2022/05/09/DS-Graph.html)
+  - [Hashing](https://basic-computer-science.github.io/datastructure/2022/05/12/DS-Hashing.html)
 
 
 - [알고리즘](https://basic-computer-science.github.io/category/#Algorithm)
