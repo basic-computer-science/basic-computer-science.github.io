@@ -27,6 +27,7 @@ categories: DataStructure
 
 임의의 데이터를 해시함수를 사용하여 고정된 크기의 값으로 변환하는 작업을 말한다.
 
+<br>
 
 💡 **해싱이 나오게 된 배경**
     <br>
@@ -34,8 +35,7 @@ categories: DataStructure
     <br>
     ***다른 탐색*** : 키들의 비교에 의한 탐색은 정렬이 안 되어 있다면 `O(n)`이고 정렬이 되어 있다면 `O(logn)`이다.
     <br>
-    ***해싱*** : 더욱 빠른 탐색을 필요로 할 때에 사용된다. 해싱은 이론적으로 `O(1)`의 시간 안에 탐색을 끝마칠 수도 있다. 해싱은 보통 사전(dictionary)과 같은 자료 구조를 구현할 때에 최상의 선택이 된다.
-    {: .notice}
+    ***해싱*** : 더욱 빠른 탐색을 필요로 할 때에 사용된다. 해싱은 이론적으로 `O(1)`의 시간 안에 탐색을 끝마칠 수도 있다. 해싱은 보통 사전(dictionary)과 같은 자료 구조를 구현할 때에 최상의 선택이 된다.    {: .notice}
 
 <br>
 
@@ -72,22 +72,15 @@ categories: DataStructure
 
 ### 📌 **장점**
 - 적은 리소스로 많은 데이터를 효율적으로 관리할 수 있다.
-    <br>
-    👉🏽  HDD, Cloud에 존재하는 많은 데이터들을 유한한 개의 해시(Hash)값으로 매핑하여 작은 크기의 캐쉬 메모리로 프로세스 관리가 가능하다.
-    {: .notice}
+  <br>
+
+  👉🏽  HDD, Cloud에 존재하는 많은 데이터들을 유한한 개의 해시(Hash)값으로 매핑하여 작은 크기의 캐쉬 메모리로 프로세스 관리가 가능하다.{: .notice}
 - key-value 가 1:1 로 매핑되어 있기 때문에 삽입, 삭제, 검색의 과정이 모두 평균적으로 `O(1)`의 시간복잡도를 가지고 있다.
-    <br>
-    💡 **해시 테이블의 성능** (여기서 ‘평균’ 시작 복잡도인 이유는 collision 때문이다.)
-    <br>
-    |  | 평균적인 경우 | 최악의 경우 |
-    | --- | --- | --- |
-    | 탐색 | O(1) | O(N) |
-    | 삽입 | O(1) | O(N) |
-    | 삭제 | O(1) | O(N) |
-    {: .notice}
 - 중복을 제거하는데 유용하다.
 - 키(key)와 해시값(Hash)이 연관성이 없어 보안에도 많이 사용된다.
 - 데이터 캐싱(Data Caching)에 많이 사용된다.
+    <br>
+
     👉🏽 get(key), put(key)에 캐시 로직을 추가하면 자주 hit하는 데이터를 바로 찾을 수 있다.
     {: .notice}
     
@@ -110,15 +103,15 @@ categories: DataStructure
 
 해시 함수에서 중요한 것은 고유한 인덱스 값을 설정하는 것이다. 해시 테이블에 사용되는 대표적인 해시 함수로는 아래의 3가지가 있다.
 
-1. `**Division Method**` : 나눗셈을 이용하는 방법으로 입력값을 테이블의 크기로 나누어 계산한다. (주소 = 입력값 % 테이블의 크기) 테이블의 크기를 소수로 정하고 2의 제곱수와 먼 값을 사용해야 효과가 좋다고 알려져 있다.
-2. `**Digit Folding**` : 각 Key의 문자열을 ASCII 코드로 바꾸고 값을 합한 데이터를 테이블 내의 주소로 사용하는 방법이다.
-3. **`Multiplication Method`** : 곱하기를 이용하는 방법으로, 숫자로 된 Key값 x와 0과 1사이의 실수 A, 보통 2의 제곱수인 m을 사용하여 다음과 같은 계산을 해준다.
+1. **Division Method** : 나눗셈을 이용하는 방법으로 입력값을 테이블의 크기로 나누어 계산한다. (주소 = 입력값 % 테이블의 크기) 테이블의 크기를 소수로 정하고 2의 제곱수와 먼 값을 사용해야 효과가 좋다고 알려져 있다.
+2. **Digit Folding** : 각 Key의 문자열을 ASCII 코드로 바꾸고 값을 합한 데이터를 테이블 내의 주소로 사용하는 방법이다.
+3. **Multiplication Method** : 곱하기를 이용하는 방법으로, 숫자로 된 Key값 x와 0과 1사이의 실수 A, 보통 2의 제곱수인 m을 사용하여 다음과 같은 계산을 해준다.
     
     ![Untitled](https://user-images.githubusercontent.com/100582309/168075085-ccae0ea7-d7c5-4aad-9174-f86786f5d97f.png)
     
     ![Untitled](https://user-images.githubusercontent.com/100582309/168075160-7a9873aa-57d2-4119-a741-f23c84ef4018.png)
     
-4. **`Universal Hashing`** : 다수의 해시함수를 만들어 집합 H에 넣어두고, 무작위로 해시함수를 선택해 해시값을 만드는 기법이다.
+4. **Universal Hashing** : 다수의 해시함수를 만들어 집합 H에 넣어두고, 무작위로 해시함수를 선택해 해시값을 만드는 기법이다.
 
 <br>
 
@@ -189,7 +182,7 @@ Linear Probing 방식에서의 탐색은 Sandra(key)에 대해서 검색을 하�
 
 해시의 저장순서 폭을 제곱으로 저장하는 방식이다. 예를 들어 처음 충돌이 발생한 경우에는 1만큼 이동하고 그 다음 계속 충돌이 발생하면 $2^2$, $3^2$ 칸씩 옮기는 방식이다.
 
-![  ](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1f3bbe8e-d241-4094-a784-3e19446cefbc/Untitled.png)
+![ ~ ](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1f3bbe8e-d241-4094-a784-3e19446cefbc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220512%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220512T124228Z&X-Amz-Expires=86400&X-Amz-Signature=fe44a975cf99003f349a95ef56ee00577f1a87d60b199f033a13e149fc3920db&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 <br>
 
