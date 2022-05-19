@@ -62,3 +62,6 @@ permalink: /about/
   - [SQL-1](https://basic-computer-science.github.io/db/2022/03/04/DB-2.html)
   - [SQL-2](https://basic-computer-science.github.io/db/2022/03/07/DB-3.html)
   - [DBMS란](https://basic-computer-science.github.io/db/2022/03/11/DB-4.html)
+  - [Disk Space Manager](https://basic-computer-science.github.io/db/2022/03/23/DB-5.html)
+  - [Index Manager](https://basic-computer-science.github.io/db/2022/03/28/DB-6.html)
+  - [Buffer Manager](https://basic-computer-science.github.io/db/2022/04/07/DB-7.html)
