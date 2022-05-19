@@ -306,6 +306,8 @@ footer {
 	color: #ccc;
 }
 
+
+/* 임지우 추가 */
 .notice {
 	background-color: #dddddd;
 	padding: 1rem;
@@ -320,6 +322,16 @@ footer {
 
 .left {
 	float: left;
+}
+
+table {
+	border-collapse: collapse;
+	border-color: #7c7c7c;
+	color: #7c7c7c;
+}
+td {
+	padding: .5em;
+	text-align: center;
 }
   
 
