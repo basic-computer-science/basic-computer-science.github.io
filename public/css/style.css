@@ -245,6 +245,10 @@ article h6 {
   	margin-bottom: 0;
 }
 
+article h2 { /* 임지우 추가 */
+	font-size: 1.35em;
+}
+
 article.home h1 a,
 article.home h2 a,
 article.home h3 a,
