@@ -67,3 +67,4 @@ permalink: /about/
   - [Buffer Manager](https://basic-computer-science.github.io/db/2022/04/07/DB-7.html)
   - [Transaction](https://basic-computer-science.github.io/db/2022/04/14/DB-8.html)
   - [Concurrency Control](https://basic-computer-science.github.io/db/2022/04/21/DB-9.html)
+  - [Crash Recovery](https://basic-computer-science.github.io/db/2022/04/28/DB-10.html)
