@@ -337,6 +337,10 @@ td {
 	padding: .5em;
 	text-align: center;
 }
+
+:root {
+	--highlight: rgb(255, 247, 191);
+}
   
 
 @media (max-width: 576px) {
